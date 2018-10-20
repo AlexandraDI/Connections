@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+  <persistence-unit name="linkedinPU" transaction-type="RESOURCE_LOCAL">
+    <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+    <class>model.User</class>
+    <class>model.Sxolio</class>
+    <class>model.Syzhthsh</class>
+    <class>model.Arthro</class>
+    <class>model.Proswpikastoixeia</class>
+    <class>model.Endiaferon</class>
+    <class>model.Polymeso</class>
+    <class>model.Interest</class>
+    <class>model.Certification</class>
+    <class>model.Education</class>
+    <class>model.City</class>
+    <class>model.Country</class>
+    <class>model.UserHasSetting</class>
+    <class>model.UserHasSkill</class>
+    <class>model.ProfessionalExperience</class>
+    <class>model.Article</class>
+    <class>model.Location</class>
+    <class>model.Reaction</class>
+    <class>model.Setting</class>
+    <class>model.UserIsConnectedToUser</class>
+    <class>model.FieldOfStudy</class>
+    <class>model.Comment</class>
+    <class>model.UserApplyAd</class>
+    <class>model.Ad</class>
+    <class>model.Department</class>
+    <class>model.Skill</class>
+    <class>model.Language</class>
+    <class>model.FieldOfWork</class>
+    <class>model.Conversation</class>
+    <class>model.UserConnectionRequestUser</class>
+    <class>model.UserFollowsUser</class>
+    <class>model.Message</class>
+    <class>model.Job</class>
+    <class>model.Administrator</class>
+    <class>model.Company</class>
+    <class>model.ToolsAndTechnology</class>
+    <class>model.School</class>
+    <exclude-unlisted-classes>false</exclude-unlisted-classes>
+    <shared-cache-mode>NONE</shared-cache-mode>
+    <properties>
+        <property name="eclipselink.cache.shared.default" value="false"/>
+      <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/linkedin?zeroDateTimeBehavior=convertToNull"/>
+      <property name="javax.persistence.jdbc.user" value="root"/>
+      <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
+      <property name="javax.persistence.jdbc.password" value="root"/>
+    </properties>
+  </persistence-unit>
+</persistence>
