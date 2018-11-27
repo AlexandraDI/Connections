@@ -1,18 +1,12 @@
 package dao;
 
 import dao.definitions.UserDAO;
-import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
-import java.util.Vector;
 
-import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
 import javax.persistence.Query;
 
-import jpautils.EntityManagerHelper;
-import model.Language;
-import model.Skill;
 import model.User;
 
 public class UserDAOImpl extends DaoEM implements UserDAO {

@@ -14,8 +14,8 @@ img {
 }
 </style>
 
-    <title>Business Bootstrap Responsive Template</title>
-    <link rel="shortcut icon" href="img/favicon.ico">
+    <title>onnections</title>
+    <link rel="shortcut icon" href="${pageContext.request.contextPath}/img/fav1.png">
 
     <!-- Global Stylesheets -->
     <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700,700i" rel="stylesheet">

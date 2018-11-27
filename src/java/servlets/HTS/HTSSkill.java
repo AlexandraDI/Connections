@@ -1,25 +1,15 @@
 
 package servlets.HTS;
 
-import dao.definitions.JobDAO;
-import dao.JobDAOImpl;
-
-import dao.definitions.SkillDAO;
-import dao.SkillDAOImpl;
 import dao.JobHasSkillDAOImpl;
 import dao.UserHasSkillDAOImpl;
-import dao.definitions.JobHasSkillDAO;
-import dao.definitions.UserHasSkillDAO;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.List;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import model.Job;
-import model.Skill;
 
 /**
  *
@@ -49,7 +39,7 @@ public class HTSSkill extends HttpServlet {
             
             //***************************************************
             //---------------------------------------------------
-            //-----------------------JOB------------------------
+            //-----------------------SKILL-----------------------
             //---------------------------------------------------
             
 
@@ -74,17 +64,7 @@ public class HTSSkill extends HttpServlet {
             } catch (Exception ex) {
                 out.println("<p>Skill not created (error)</p>");
             }     
-            
-            /*
-            if( dao.remove(2,1)){
-                out.println("<p>Job removed (correct)</p>");
-            }else{
-                out.println("<p>Job not removed (error)</p>");
-            }            
-            */
-          
 
-            
         }
         
         

@@ -2,7 +2,6 @@ package servlets.navigation;
 
 import dao.UserIsConnectedToUserDAOImpl;
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.util.List;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -10,7 +9,6 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 import model.UserIsConnectedToUser;
 import model.User;
 
@@ -23,16 +21,12 @@ public class HisNetworkServlet extends HttpServlet {
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        
-        
-        //HttpSession session = request.getSession();
+
         
         User user = (User) request.getSession(false).getAttribute("connectionid");
         
         List<UserIsConnectedToUser> networkList;
         List<UserIsConnectedToUser> networkList1;
-        /*networkList = (List<UserIsConnectedToUser>) request.getSession(false).getAttribute("networkList");
-        networkList1 = (List<UserIsConnectedToUser>) request.getSession(false).getAttribute("networkList1");*/
         
         User userdetail;
         
@@ -40,9 +34,6 @@ public class HisNetworkServlet extends HttpServlet {
 
         networkList = dao3.find(Integer.parseInt(request.getParameter("connectionid")));
         networkList1 = dao3.find2(Integer.parseInt(request.getParameter("connectionid")));
-        
-        //request.getSession(false).setAttribute("networkList", networkList);
-        //request.getSession(false).setAttribute("networkList1", networkList1);
         
         
         request.setAttribute("networkList", networkList); 

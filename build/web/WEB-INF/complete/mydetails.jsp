@@ -17,11 +17,7 @@
 <!--====================================================
                          HEADER
 ======================================================--> 
-
-<%-- <jsp:include page="/WEB-INF/private/composite/header.jsp"/> --%>
  
-
-
     <header>
         
         <jsp:include page="/WEB-INF/private/topmenubar.jsp"/>
@@ -36,14 +32,12 @@
         <!--====================================================
                                HOME-P
         ======================================================-->
-    <!--    
-        
-        <!--<div id="home-p" class="home-p pages-head3 text-center"> -->
+
        <div id="home-p" class="home-p  text-center"> 
         <img src="${pageContext.request.contextPath}/img/news/man2.png" alt="user" style="width:7%;"> 
             <div class="container">
                 <h4 class="wow fadeInUp" data-wow-delay="0.1s">${me.firstname} ${me.surname}</h4>
-            </div><!--/end container-->
+            </div>
         </div> 
       
       
@@ -53,26 +47,8 @@
 ======================================================--> 
     <section id="single-news-p1" class="single-news-p1">
       <div class="container" style="width:35%"> 
-    <!--    <div class="row">  
-            
-            
-            
-            <center>            
-          
 
-          <!-- right news details -->
-         <!-- <div class="col-md-9"> -->
             <div class="single-news-p1-cont">
-                
-               <!-- 
-              <div class="single-news-img">
-                <img src="img/news/man2.jpg" alt="" style="width:20%;">
-              </div>
-              <div class="single-news-desc">
-                  <center><h3>${me.firstname} ${me.surname}</h3></center>
-
-                
-                -->
                 <hr>                
                 <div class="bg-light-gray">  
                     <center><h5>Education</h5></center>
@@ -101,13 +77,6 @@
                 <hr>                
               </div>
             </div> 
-           <!--</center>-->
-            
-    <!--   </div> -->
-
-   
-
-     <!--   </div>-->
      </div>
     </section>
  

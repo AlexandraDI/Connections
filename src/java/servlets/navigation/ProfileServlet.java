@@ -7,7 +7,6 @@ package servlets.navigation;
 
 import dao.UserDAOImpl;
 import java.io.IOException;
-import java.io.PrintWriter;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -35,10 +34,6 @@ public class ProfileServlet extends HttpServlet {
         UserDAOImpl dao = new UserDAOImpl();
         
         me = dao.find(myemail);
-        
-        
-        
-        
         
         session.setAttribute("me", me);      
         request.setAttribute("me", me);

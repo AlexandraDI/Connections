@@ -1,24 +1,13 @@
 package servlets.HTS;
 
-import dao.definitions.UserDAO;
-import dao.UserDAOImpl;
-import dao.definitions.AdministratorDAO;
-import dao.AdministratorDAOImpl;
-import dao.definitions.InterestDAO;
-import dao.InterestDAOImpl;
 import dao.UserHasInterestDAOImpl;
-import dao.definitions.UserHasInterestDAO;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.List;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import model.User;
-import model.Administrator;
-import model.Interest;
 
 /**
  *
@@ -50,14 +39,9 @@ public class HTSInterest extends HttpServlet {
             //---------------------------------------------------
             //-----------------------Interest------------------------
             //---------------------------------------------------
-            
-              
-            
 
             UserHasInterestDAOImpl dao = new UserHasInterestDAOImpl();
-            
-                   
-            
+
             try {
                 dao.create(59,1);
                 out.println("<p>Interest created (correct)</p>");
@@ -71,10 +55,7 @@ public class HTSInterest extends HttpServlet {
             }else{
                 out.println("<p>Interest not removed (error)</p>");
             }            
-            
-                                
-           
-            
+
         }
         
         

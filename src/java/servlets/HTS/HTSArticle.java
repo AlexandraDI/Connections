@@ -5,24 +5,14 @@
  */
 package servlets.HTS;
 
-import dao.definitions.UserDAO;
-import dao.UserDAOImpl;
-import dao.definitions.AdministratorDAO;
-import dao.AdministratorDAOImpl;
-import dao.definitions.InterestDAO;
-import dao.InterestDAOImpl;
 import dao.CommentDAOImpl;
-import dao.definitions.CommentDAO;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.List;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import model.User;
-import model.Article;
 
 /**
  *
@@ -65,19 +55,10 @@ public class HTSArticle extends HttpServlet {
             
             
             try {
-               //////!!!!!!!!!!!! dao.create(59,1);
                 out.println("<p>Comment created (correct)</p>");
             } catch (Exception ex) {
                 out.println("<p>Comment not created (error)</p>");
             }     
-            
-            /*
-            if( dao.remove(52,1)){
-                out.println("<p>Comment removed (correct)</p>");
-            }else{
-                out.println("<p>Comment not removed (error)</p>");
-            }            
-            */
           
             
             

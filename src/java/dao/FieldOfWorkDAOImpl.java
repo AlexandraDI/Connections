@@ -1,17 +1,12 @@
 package dao;
 
 import dao.definitions.FieldOfWorkDAO;
-import dao.definitions.UserDAO;
-import java.util.ArrayList;
 import java.util.List;
 
-import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
 import javax.persistence.Query;
 
-import jpautils.EntityManagerHelper;
 import model.FieldOfWork;
-import model.User;
 
 public class FieldOfWorkDAOImpl extends DaoEM implements FieldOfWorkDAO {
 

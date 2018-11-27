@@ -1,18 +1,12 @@
 package servlets.navigation;
 
-import dao.CommentDAOImpl;
 import dao.ConversationDAOImpl;
-import dao.ReactionDAOImpl;
 import dao.UserConnectionRequestUserDAOImpl;
 import dao.UserDAOImpl;
-import dao.UserHasSettingDAOImpl;
 import dao.UserIsConnectedToUserDAOImpl;
-import dao.definitions.ReactionDAO;
 import dao.definitions.UserConnectionRequestUserDAO;
-import dao.definitions.UserHasSettingDAO;
 import dao.definitions.UserIsConnectedToUserDAO;
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.util.List;
 import java.util.Map;
 import javax.servlet.RequestDispatcher;
@@ -21,13 +15,8 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
-import model.Article;
-import model.Comment;
 import model.Conversation;
 import model.ProfessionalExperience;
-import model.Reaction;
-import model.ReactionPK;
 import model.User;
 import model.UserConnectionRequestUser;
 import model.UserHasSetting;
@@ -49,11 +38,9 @@ public class UserDetailsServlet extends HttpServlet {
 
         try {
             if (!params.isEmpty() && params.get("do") != null) {
-                //UserHasLanguageDAOImpl uhl = new UserHasLanguageDAOImpl();
 
                 String sdo = params.get("do")[0];
 
-                //Date date =  new Date();
                 if (sdo.equals("sendfriendrequest")) {
                     Integer id = Integer.parseInt(request.getParameter("id").toString());
 
@@ -71,7 +58,7 @@ public class UserDetailsServlet extends HttpServlet {
 
         UserDAOImpl udao = new UserDAOImpl();
 
-        User user;// = new User();// = (User) request.getSession(false).getAttribute("me");
+        User user;
 
         user = udao.find(id); // update from db
 
@@ -82,11 +69,7 @@ public class UserDetailsServlet extends HttpServlet {
         }
         user.getEducationList();
         user.getUserHasSkillList();
-
-
-        //for (ProfessionalExperience p : user.getProfessionalExperienceList()) {
-        //    p.getJobId();
-        //}        
+       
         request.setAttribute("user", user);
 
         {
@@ -95,13 +78,9 @@ public class UserDetailsServlet extends HttpServlet {
             List<UserIsConnectedToUser> find = dao.find(id);
             List<UserIsConnectedToUser> find2 = dao.find2(id);
 
-            //List<Conversation> cfind = cdao.find(id);
-            //List<Conversation> cfind2 =cdao.find(id);
-            //cfind.addAll(cfind2);
             find.addAll(find2);
 
             boolean friend = false;
-            //boolean conversation=false;
 
             for (UserIsConnectedToUser e : find) {
                 if (e.getUser().getUserId() == myid && e.getUser1().getUserId() == id) {
@@ -114,20 +93,8 @@ public class UserDetailsServlet extends HttpServlet {
                     break;
                 }
             }
-            /*
-            for (Conversation c : cfind) {
-                if (c.getUser1Id().getUserId() == myid && c.getUser2Id().getUserId() == id) {
-                    conversation = true;
-                    break;
-                }
-                 if (c.getUser1Id().getUserId() == id && c.getUser2Id().getUserId() == myid) {
-                    conversation = true;
-                    break;
-                }               
-            } */
 
             request.setAttribute("friend", friend);
-            //request.setAttribute("conversation", conversation);
         }
 
         {
@@ -185,17 +152,11 @@ public class UserDetailsServlet extends HttpServlet {
             request.setAttribute("education_private", education_private);
         }
         {
-            //       request.setAttribute("conversationlist", me.getConversationList());
-            //       request.setAttribute("conversationlist1", me.getConversationList1());            
-        }
-        {
 
             ConversationDAOImpl cdao = new ConversationDAOImpl();
             List<Conversation> clist, clist1;
             clist = cdao.find(myid);
             clist1 = cdao.find2(myid);            
-            //clist = me.getConversationList();
-            //clist1 = me.getConversationList1();
             boolean conversation = false;
 
             for (Conversation conv : clist) {
@@ -203,19 +164,16 @@ public class UserDetailsServlet extends HttpServlet {
                     conversation = true;
                 }
             }
-            //*if (conversation == false) {
                 for (Conversation conv : clist1) {
                     if ((conv.getUser1Id().getUserId() == id) ||(conv.getUser2Id().getUserId() == id)) {
                         conversation = true;
                     }
 
                 }
-            //}
 
             request.setAttribute("conversation", conversation);
         }
 
-        //request.setAttribute("userdetail", u);
         String nextJSP = "/WEB-INF/complete/userdetails.jsp";
         RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(nextJSP);
         dispatcher.forward(request, response);

@@ -3,7 +3,6 @@ package servlets.navigation;
 import dao.UserDAOImpl;
 import dao.UserIsConnectedToUserDAOImpl;
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.List;
 import javax.servlet.RequestDispatcher;
@@ -12,8 +11,6 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import model.Article;
-import model.Reaction;
 import model.User;
 import model.UserIsConnectedToUser;
 
@@ -36,8 +33,6 @@ public class FriendRequestServlet extends HttpServlet {
         List<UserIsConnectedToUser> connections= new ArrayList<>();
         List<User> users= new ArrayList<>();
         List<User> not= new ArrayList<>();
-        //List<User> notconnected;
-  
         
         List<UserIsConnectedToUser> networkList;
         List<UserIsConnectedToUser> networkList1;
@@ -52,11 +47,7 @@ public class FriendRequestServlet extends HttpServlet {
         
         users  = udao.list();
         if (!(connections == null)) {
-            //for()
             for (UserIsConnectedToUser list : networkList) {
-                        // if(list.getUser().equals(users.getUserId())){                        
-                        //     users.remove(list.getUser());
-                         //}
             }            
             
         } 

@@ -1,10 +1,7 @@
 package servlets.navigation;
 
-import dao.LanguageDAOImpl;
 import dao.UserDAOImpl;
 import java.io.IOException;
-import java.io.PrintWriter;
-import java.util.List;
 import java.util.Map;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -47,10 +44,8 @@ public class ViewWorkExperienceServlet extends HttpServlet {
         for (ProfessionalExperience p : me.getProfessionalExperienceList()) {
             p.getJobId();
         }
-        
-        
-        request.setAttribute("user", me);
-        
+                
+        request.setAttribute("user", me);        
 
         String nextJSP = "/WEB-INF/complete/viewworkexperience.jsp";
         RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(nextJSP);

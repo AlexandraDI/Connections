@@ -23,10 +23,6 @@
             <!-- Navbar -->
             
             <jsp:include page="/WEB-INF/private/navbar.jsp"/>
-
-            <%--<jsp:include page="/WEB-INF/private/navbarforsearch.jsp"/>--%>
-            
-
         </header> 
 
 
@@ -46,19 +42,10 @@
                                 news-p1
         ======================================================--> 
 
-               
-        <%--    <center>${fn:length(networkList)}</center>&nbsp;
-        <%--    <center><c:out value = "${networkList[0].datetimeConnectionMade}"/></center>&nbsp;
-        <%--<center><c:out value = "${networkList[0].user1.userId}"/></center>&nbsp;
-        <center><c:out value ="${requestScope.networkList}"/></center>--%>
-        <%--    <center>${fn:length(networkList1)}</center>
-        --%>
-
         <section id="news-p1" class="news-p1">
             <div class="container" style="width:30%;">
                 <div class="bg-light-gray" >             
                     <div class="row">
-                        <%--<center><h4>Connections</h4></center>--%>
                         <div class="card-columns">
 
                             <c:set var="number" value="${fn:length(networkList)}" /> 
@@ -108,120 +95,6 @@
                             </c:if>
 
 
-                            <%--
-                                   <div class="card" style="width:100%;">
-                                       <div class="desc-comp-offer-cont">
-                                           <div class="thumbnail-blogs">                  
-                                               <div class="caption" >
-                                                   <a href="${pageContext.request.contextPath}/userdetails">                     
-                                                       <i class="fa fa-chain" ></i></a>
-                                               </div>                 
-                                               <center><img src="img/news/girl2.jpg" class="img-fluid" alt="..."style="width:50%;"></center>
-                                           </div>
-                                           <center><h3>${me.firstname} ${me.surname}</h3></center>
-                                           <center><p class="desc">Professional Position &nbsp; Employment Institution</p></center>              
-                                           <center><a href="${pageContext.request.contextPath}/userdetails"><i class="fa fa-arrow-circle-o-right"></i> Learn More</a></center>
-                                       </div>
-                                   </div> 
-                                   <div class="card" style="width:100%;">
-                                       <div class="desc-comp-offer-cont">
-                                           <div class="thumbnail-blogs">                  
-                                               <div class="caption" >
-                                                   <a href="${pageContext.request.contextPath}/userdetails">                     
-                                                       <i class="fa fa-chain" ></i></a>
-                                               </div>                 
-                                               <center><img src="img/news/man4.jpg" class="img-fluid" alt="..."style="width:50%;"></center>
-                                           </div>
-                                           <center><h3>${me.firstname} ${me.surname}</h3></center>
-                                           <center><p class="desc">Professional Position &nbsp; Employment Institution</p></center>              
-                                           <center><a href="${pageContext.request.contextPath}/userdetails"><i class="fa fa-arrow-circle-o-right"></i> Learn More</a></center>
-                                       </div>
-                                   </div> 
-                                   <div class="card" style="width:100%;">
-                                       <div class="desc-comp-offer-cont">
-                                           <div class="thumbnail-blogs">                  
-                                               <div class="caption" >
-                                                   <a href="${pageContext.request.contextPath}/userdetails">                     
-                                                       <i class="fa fa-chain" ></i></a>
-                                               </div>                 
-                                               <center><img src="img/news/man2.jpg" class="img-fluid" alt="..."style="width:50%;"></center>
-                                           </div>
-                                           <center><h3>${me.firstname} ${me.surname}</h3></center>
-                                           <center><p class="desc">Professional Position &nbsp; Employment Institution</p></center>              
-                                           <center><a href="${pageContext.request.contextPath}/userdetails"><i class="fa fa-arrow-circle-o-right"></i> Learn More</a></center>
-                                       </div>
-                                   </div> 
-                                   <div class="card" style="width:100%;">
-                                       <div class="desc-comp-offer-cont">
-                                           <div class="thumbnail-blogs">                  
-                                               <div class="caption" >
-                                                   <a href="${pageContext.request.contextPath}/userdetails">                     
-                                                       <i class="fa fa-chain" ></i></a>
-                                               </div>                 
-                                               <center><img src="img/news/man1.jpg" class="img-fluid" alt="..."style="width:50%;"></center>
-                                           </div>
-                                           <center><h3>${me.firstname} ${me.surname}</h3></center>
-                                           <center><p class="desc">Professional Position &nbsp; Employment Institution</p></center>              
-                                           <center><a href="${pageContext.request.contextPath}/userdetails"><i class="fa fa-arrow-circle-o-right"></i> Learn More</a></center>
-                                       </div>
-                                   </div> 
-                                   <div class="card" style="width:100%;">
-                                       <div class="desc-comp-offer-cont">
-                                           <div class="thumbnail-blogs">                  
-                                               <div class="caption" >
-                                                   <a href="${pageContext.request.contextPath}/userdetails">                     
-                                                       <i class="fa fa-chain" ></i></a>
-                                               </div>                 
-                                               <center><img src="img/news/man2.jpg" class="img-fluid" alt="..."style="width:50%;"></center>
-                                           </div>
-                                           <center><h3>${me.firstname} ${me.surname}</h3></center>
-                                           <center><p class="desc">Professional Position &nbsp; Employment Institution</p></center>              
-                                           <center><a href="${pageContext.request.contextPath}/userdetails"><i class="fa fa-arrow-circle-o-right"></i> Learn More</a></center>
-                                       </div>
-                                   </div> 
-                                   <div class="card" style="width:100%;">
-                                       <div class="desc-comp-offer-cont">
-                                           <div class="thumbnail-blogs">                  
-                                               <div class="caption" >
-                                                   <a href="${pageContext.request.contextPath}/userdetails">                     
-                                                       <i class="fa fa-chain" ></i></a>
-                                               </div>                 
-                                               <center><img src="img/news/man3.jpg" class="img-fluid" alt="..."style="width:50%;"></center>
-                                           </div>
-                                           <center><h3>${me.firstname} ${me.surname}</h3></center>
-                                           <center><p class="desc">Professional Position &nbsp; Employment Institution</p></center>              
-                                           <center><a href="${pageContext.request.contextPath}/userdetails"><i class="fa fa-arrow-circle-o-right"></i> Learn More</a></center>
-                                       </div>
-                                   </div> 
-                                   <div class="card" style="width:100%;">
-                                       <div class="desc-comp-offer-cont">
-                                           <div class="thumbnail-blogs">                  
-                                               <div class="caption" >
-                                                   <a href="${pageContext.request.contextPath}/userdetails">                     
-                                                       <i class="fa fa-chain" ></i></a>
-                                               </div>                 
-                                               <center><img src="img/news/man2.jpg" class="img-fluid" alt="..."style="width:50%;"></center>
-                                           </div>
-                                           <center><h3>${me.firstname} ${me.surname}</h3></center>
-                                           <center><p class="desc">Professional Position &nbsp; Employment Institution</p></center>              
-                                           <center><a href="${pageContext.request.contextPath}/userdetails"><i class="fa fa-arrow-circle-o-right"></i> Learn More</a></center>
-                                       </div>
-                                   </div>  
-                                   <div class="card" style="width:100%;">
-                                       <div class="desc-comp-offer-cont">
-                                           <div class="thumbnail-blogs">                  
-                                               <div class="caption" >
-                                                   <a href="${pageContext.request.contextPath}/userdetails">                     
-                                                       <i class="fa fa-chain" ></i></a>
-                                               </div>                 
-                                               <center><img src="img/news/man.jpg" class="img-fluid" alt="..."style="width:50%;"></center>
-                                           </div>
-                                           <center><h3>${me.firstname} ${me.surname}</h3></center>
-                                           <center><p class="desc">Professional Position &nbsp; Employment Institution</p></center>              
-                                           <center><a href="${pageContext.request.contextPath}/userdetails"><i class="fa fa-arrow-circle-o-right"></i> Learn More</a></center>
-                                       </div>
-                                   </div> 
-                            --%>
                         </div>
                     </div>
                 </div>

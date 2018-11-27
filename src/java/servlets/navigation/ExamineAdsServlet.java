@@ -1,15 +1,9 @@
 package servlets.navigation;
 
 import dao.AdDAOImpl;
-import dao.UserDAOImpl;
-import dao.definitions.AdDAO;
-import dao.definitions.UserDAO;
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
-import java.util.Map;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -18,8 +12,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import model.Ad;
 import model.User;
-import model.Job;
-import model.UserIsConnectedToUser;
 
 /**
  *
@@ -41,7 +33,6 @@ public class ExamineAdsServlet extends HttpServlet {
 
 
         if (!(adlist == null)) {
-                //out.println("<p>- " + u.getFirstname()+ " " + u.getSurname()+ " " + u.getPassword() + " </p>");
                 for (Ad ad : adlist) {
                     if ((ad.getUserId().getUserId().equals(me.getUserId()))) {
                         myadlist.add(ad);

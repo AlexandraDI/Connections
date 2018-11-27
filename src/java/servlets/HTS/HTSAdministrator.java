@@ -5,12 +5,8 @@
  */
 package servlets.HTS;
 
-import dao.definitions.UserDAO;
 import dao.UserDAOImpl;
-import dao.definitions.AdministratorDAO;
 import dao.AdministratorDAOImpl;
-import dao.definitions.InterestDAO;
-import dao.InterestDAOImpl;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.List;
@@ -21,7 +17,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import model.User;
 import model.Administrator;
-import model.Interest;
 
 /**
  *
@@ -123,31 +118,9 @@ public class HTSAdministrator extends HttpServlet {
             List<Administrator> administrator = dao2.list();
             
             out.println("<p>Total administrator: " + administrator.size() + "</p>");
-          
-//            for (Administrator a: administrator) {
-//                
-//                out.println("<p>- " + a.getIdadministrator() + " " + a.getIduser()+ "</p>");
-//            } 
-            
-            
-//            out.println("<h1>Test admin create()");
-//            Administrator admn = new Administrator();
-//            admn.setIdadministrator(2);
-//            User useraki = new User();
-//            useraki.setIduser(4);
-//            
-//            admn.setIduser(useraki);
-           
-//            User useridio = dao.find(useraki.getIduser());
-            //useraki=User.findIdUser(useraki.getFirstname());
-            
-//            out.println("<p>- " + useridio.getFirstname() + " </p>");
-            
-                    
-           // admn.setIduser(User[ iduser=4 ]);
+
 
             try {
-//                dao2.create(admn);
                 out.println("<p>Admin admn created (correct)</p>");
             } catch (Exception ex) {
                 out.println("<p>Admin admn not created (error)</p>");
@@ -169,9 +142,6 @@ public class HTSAdministrator extends HttpServlet {
                 out.println("<p>User 2 not found (correct)</p>");
             }            
             
-         
-            
-            // add postfix
             out.println("</body>");
             out.println("</html>");
             

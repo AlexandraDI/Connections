@@ -5,29 +5,16 @@
  */
 package servlets.HTS;
 
-import dao.definitions.UserDAO;
-import dao.UserDAOImpl;
-import dao.definitions.AdministratorDAO;
-import dao.AdministratorDAOImpl;
-import dao.definitions.InterestDAO;
-import dao.InterestDAOImpl;
 import dao.UserFollowsUserDAOImpl;
-import dao.definitions.UserFollowsUserDAO;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.ArrayList;
 import java.util.List;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import model.User;
-import model.Administrator;
-import model.Interest;
 import model.UserFollowsUser;
-import jpautils.EntityManagerHelper;
-import javax.persistence.EntityTransaction;
 
 /**
  *
@@ -73,42 +60,7 @@ public class HTSUserFollowsUser extends HttpServlet {
             UserFollowsUserDAOImpl dao = new UserFollowsUserDAOImpl();
             
             out.println("<p>Test2</p>");
-            
-            //UserDAOImpl dao = new UserDAOImpl();
-            
-            // ------------------------------------ LIST
-            
-            
-   // public List<User> findFollowers(Integer userId) {
-        /*List<User> users;
-        int userId=1;
-        User u= new User();
-        u.setUserId(userId);
-        User who = u.find(User.class, userId);
-        if (who != null) {
-            List<UserFollowsUser> pairs = who.getUserFollowsUserList1();
-             users = new ArrayList<>();
 
-            for (UserFollowsUser pair : pairs) {
-                User other = em.find(User.class, pair.getUser());
-                if (other != null) {
-                    users.add(other);
-                }
-            }
-            //return users;
-        } else {
-            //return null;
-            users=null;
-        }*/
-   // }            
-            
-            
-            
-            
-            
-            
-            
-            
             
             int userId=1;
             out.println("<h1>Test listall()");
@@ -116,12 +68,6 @@ public class HTSUserFollowsUser extends HttpServlet {
             
 
             out.println("<p>Total users: " + users.size() + "</p>");
-
-            
-            //out.println("<p>- " + users.get(1)+ " " + " </p>");
-            
-            out.println("<p>Test2aa</p>");
-            
             
             for (UserFollowsUser u : users) {
                
@@ -140,8 +86,7 @@ public class HTSUserFollowsUser extends HttpServlet {
                
                 out.println("<p>- " + u.getUser().getUserId()+ " " + " </p>");
             }            
-            
-             out.println("<p>Test2a</p>");
+
             
             
             if(dao.startFollowing(3,1)){
@@ -149,19 +94,7 @@ public class HTSUserFollowsUser extends HttpServlet {
             } else{
                 out.println("<p>UserFollowsUser not created (error)</p>");
             }     
-            
-            
-            /*
-            if( dao.remove(52,1)){
-                out.println("<p>Language removed (correct)</p>");
-            }else{
-                out.println("<p>Language not removed (error)</p>");
-            } 
-            */
-            
-          
-            
-            
+
             
             out.println("<p>Test3</p>");
             

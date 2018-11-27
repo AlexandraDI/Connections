@@ -5,7 +5,7 @@
 <nav class="navbar navbar-expand-lg navbar-light" id="mainNav" data-toggle="affix">
     <div class="container">
         <a class="navbar-brand smooth-scroll" href="${pageContext.request.contextPath}/xronologio">
-            <img src="${pageContext.request.contextPath}/img/connect1.png" alt="logo">
+            <img src="${pageContext.request.contextPath}/img/con9.png" alt="logo">
         </a> 
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"> 
             <span class="navbar-toggler-icon"></span>
@@ -14,16 +14,12 @@
             <ul class="navbar-nav ml-auto">
 
                 <c:if test="${not empty me and empty administrator}">
-                    <!--<li class="nav-item" ><a class="nav-link smooth-scroll"href="${pageContext.request.contextPath}">Welcome</a></li>--> 
-                    <!--<li class="nav-item" ><a class="nav-link smooth-scroll" href="${pageContext.request.contextPath}/xronologio">Home</a></li>-->
-                    <%--<li class="nav-item" ><a class="nav-link smooth-scroll" href="${pageContext.request.contextPath}/profile">Profile</a></li>--%>
                     <li class="nav-item dropdown" >                                            
                         <a class="nav-link dropdown-toggle smooth-scroll" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Home</a> 
                         <div class="dropdown-menu dropdown-cust" aria-labelledby="navbarDropdownMenuLink">
                             <a class="dropdown-item" href="${pageContext.request.contextPath}/xronologio">Articles</a>
                             <a class="dropdown-item" href="${pageContext.request.contextPath}/myfollowedarticles">Followed Articles</a>
                             <a class="dropdown-item" href="${pageContext.request.contextPath}/nearestneighbourarticles">Nearest Neighbour Articles</a>
-
                         </div>
                     </li>                    
                     <li class="nav-item dropdown" >                                            
@@ -32,7 +28,6 @@
                             <a class="dropdown-item" href="${pageContext.request.contextPath}/profile">Personal Information</a>
                             <a class="dropdown-item" href="${pageContext.request.contextPath}/manageeducation">Manage Education</a>
                             <a class="dropdown-item" href="${pageContext.request.contextPath}/languages">Manage languages</a>
-                            <!--<a class="dropdown-item" href="${pageContext.request.contextPath}/viewworkexperience">View Work Experience</a>-->
                             <a class="dropdown-item" href="${pageContext.request.contextPath}/addworkexperience">Manage Work Experience</a>
                             <a class="dropdown-item" href="${pageContext.request.contextPath}/manageskills">Manage Skills</a>
                             <a class="dropdown-item" href="${pageContext.request.contextPath}/userdetails?id=${me.userId}">View All</a>
@@ -83,10 +78,10 @@
                                         <div class="col-md-9">
                                             <ul class="list-inline top-contacts">
                                                 <li>
-                                                    <i class="fa fa-envelope"></i> Email: <a href="mailto:info@htmlstream.com">info@htmlstream.com</a>
+                                                    <i class="fa fa-envelope"></i> Email: <a href="mailto:info@connections.com">info@connections.com</a>
                                                 </li>
                                                 <li>
-                                                    <i class="fa fa-phone"></i> Hotline: (1) 396 4587 99
+                                                    <i class="fa fa-phone"></i> Hotline:
                                                 </li>
                                             </ul>
                                         </div> 

@@ -2,7 +2,6 @@ package dao.definitions;
 
 import java.util.List;
 import model.UserHasSetting;
-import model.Setting;
 
 import model.User;
 

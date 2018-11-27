@@ -13,7 +13,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="all,follow">
 
-    <title>Bootstrap Admin Template </title>
+    <title>Admin</title>
     <link rel="shortcut icon" href="${pageContext.request.contextPath}/admin/img/favicon.ico">
 
     <!-- global stylesheets -->

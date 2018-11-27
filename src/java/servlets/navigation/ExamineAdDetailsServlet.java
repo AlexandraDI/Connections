@@ -6,7 +6,6 @@ import dao.UserDAOImpl;
 import dao.definitions.AdDAO;
 import dao.definitions.UserDAO;
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.util.List;
 import java.util.Map;
 import javax.servlet.RequestDispatcher;
@@ -42,24 +41,19 @@ public class ExamineAdDetailsServlet extends HttpServlet {
                 String title = params.get("title")[0];
                 String desc = params.get("desc")[0];  
                 String jobid = params.get("jobId")[0];  
-                //Integer jobId = Integer.parseInt(request.getParameter("jobid").toString());
 
                 AdDAO dao = new AdDAOImpl();
                 UserDAO udao = new UserDAOImpl();
                 Job job = new Job();               
 
-                //java.sql.Date date = new java.sql.Date(System.currentTimeMillis());
                 job.setJobId(Integer.parseInt(jobid));
 
                 Ad ad = new Ad();
-                //ad.setDatetimeCreated(date);
                 ad.setDescription(desc);
                 ad.setJobId(job);
                 ad.setUserId(user);
                 ad.setTitle(title);                
 
-                //create
-                //dao.create(ad);
                 
                 //update
                 dao.update(adId, ad);

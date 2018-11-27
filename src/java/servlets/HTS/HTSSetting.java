@@ -1,24 +1,13 @@
 package servlets.HTS;
 
-import dao.definitions.UserDAO;
-import dao.UserDAOImpl;
-import dao.definitions.AdministratorDAO;
-import dao.AdministratorDAOImpl;
-import dao.definitions.SettingDAO;
-import dao.SettingDAOImpl;
 import dao.UserHasSettingDAOImpl;
-import dao.definitions.UserHasSettingDAO;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.List;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import model.User;
-import model.Setting;
-import model.Interest;
 
 /**
  *
@@ -50,30 +39,16 @@ public class HTSSetting extends HttpServlet {
             //---------------------------------------------------
             //-----------------------Interest------------------------
             //---------------------------------------------------
-            
-              
-            
 
-            UserHasSettingDAOImpl dao = new UserHasSettingDAOImpl();
-            
-                   
+            UserHasSettingDAOImpl dao = new UserHasSettingDAOImpl();    
             
             try {
                 dao.create(59,1,"FRIENDS");
                 out.println("<p>Setting created (correct)</p>");
             } catch (Exception ex) {
                 out.println("<p>Setting not created (error)</p>");
-            }     
-            
-            
-            /*if( dao.remove(59,1)){
-                out.println("<p>Interest removed (correct)</p>");
-            }else{
-                out.println("<p>Interest not removed (error)</p>");
-            }  */          
-            
-                                
-           
+            }             
+     
             
         }
         

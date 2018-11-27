@@ -15,10 +15,6 @@
                                  HEADER
         ======================================================--> 
 
-        <%-- <jsp:include page="/WEB-INF/private/composite/header.jsp"/> --%>
-
-
-
         <header>
 
             <jsp:include page="/WEB-INF/private/topmenubar.jsp"/>
@@ -35,14 +31,6 @@
         ======================================================--> 
         <section id="single-news-p1" class="single-news-p1">
             <div class="container" style="width:45%"> 
-                <!-- <div class="row">  
-                     
-                <!--  <div class="col-md-1">                                                                                 
-                  </div>             
-                    
-        
-                <!-- right news details -->
-                <!--    <div class="col-md-9"> -->
                 <div class="single-news-p1-cont">
                     <div class="single-news-img">
                         <img src="img/news/news-box.jpg" alt="" style="width:85%;">
@@ -140,20 +128,17 @@
                                             <div class="comment-main-level">
                                                 <!-- Avatar -->
                                                 <div class="comment-avatar"><img src="img/news/man2.jpg" alt=""></div>
-                                                <!-- Contenedor del Comentario -->
+                                                <!-- Comments -->
                                                 <div class="comment-box">
                                                     <div class="comment-head">
                                                         <h6 class="comment-name"><a href="${pageContext.request.contextPath}/profile">${com.userId.firstname} ${com.userId.surname}</a></h6>
                                                         <span>${com.datetimeCreated} ${me.userId} ${com.userId.userId}</span>
                                                         <c:if test="${me.userId eq com.userId.userId}">
-                                                            <%--${com.commentId}--%>
                                                             <form method="post" action="">
                                                             <input type="hidden" name="do" value="delete">
                                                             <input type="hidden" name="commentid" value="${com.commentId}">
                                                             <div align="right">
                                                                 <input type="submit" class="btn btn-general btn-green" value="x"></div>
-                                                            <%--<i class="fa fa-close"><input type="submit" class="fa fa-close">
-                                                            </i>--%>
                                                             </form>
                                                         </c:if>
                                                     </div>
@@ -171,39 +156,19 @@
 
                         <div class="comment-box-sn">
                             <h5>Leave a Comment</h5>
-                            <%--<textarea name="contentOfComment" id="contentOfComment" placeholder="Comment"></textarea>
-                            <!--<button class="btn btn-general btn-green" style="width: 100%;" role="button">Send</button>-->
-                            <div class="form-group ">
-                                <input type="hidden" name="do" value="add">
-                                <center><input class="btn btn-general btn-green" style="width: 100%;" type="submit" value="Add comment"></center>
-                            </div>                            
-                            --%>
 
                             <form method="post" id="login-form" action="">
-                                <%--<center><h6><font color="gray">Title:</font></h6></center>--%>
                                 <input type="hidden" name="do" value="add">
                                 <textarea type="text" name="contentOfComment" placeholder="Comment" required="true" class="form-control" style="width: 100%;"></textarea></br>
-                                <%--<center><h6><font color="gray">   Text:</font></h6></center>--%>
 
 
                                 <center><p>${result}</p></center>                                    
                                 <input type="submit" value="POST" class="btn btn-general btn-green" style="width: 100%;" required="true">
-                            </form>                        
-                            <!--
-                                <div class="form-group ">
-                                    <input name="contentOfComment" id="contentOfComment" placeholder="Comment"></textarea>
-                                    <input type="hidden" name="do" value="add">
-                                    <center><input class="btn btn-general btn-white text-center" type="submit" value="Add Comment"></center>
-                                </div> -->                       
+                            </form>                                             
                         </div>
                     </div>
                 </div>  
                 <hr>
-                <!--  </div> 
-           
-              
-           
-                <!--   </div>-->
             </div>
         </section>
 

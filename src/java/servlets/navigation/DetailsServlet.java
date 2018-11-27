@@ -9,13 +9,9 @@ import dao.ArticleDAOImpl;
 import dao.ReactionDAOImpl;
 import dao.UserDAOImpl;
 import dao.CommentDAOImpl;
-import dao.definitions.ReactionDAO;
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.util.List;
 import java.util.Map;
-import java.sql.Timestamp;
-import java.util.Date;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -51,20 +47,15 @@ public class DetailsServlet extends HttpServlet {
 
         try {
             if (!params.isEmpty()) {
-                //UserHasLanguageDAOImpl uhl = new UserHasLanguageDAOImpl();
 
                 String sdo = params.get("do")[0];
 
-                //Date date =  new Date();
                 if (sdo.equals("add")) {
                     CommentDAOImpl com = new CommentDAOImpl();
                     Comment entity = new Comment();
                     java.sql.Date date = new java.sql.Date(System.currentTimeMillis());
-                    //java.sql.Date date = new java.sql.Date(start.getTime());
 
-                    //String languageId = params.get("languageId")[0];
                     String contentOfComment = params.get("contentOfComment")[0];
-                    //uhl.create(me.getUserId(), Integer.parseInt(languageId));
                     entity.setArticleId(article);
                     entity.setContent(contentOfComment);                    
                     entity.setDatetimeCreated(date);
@@ -77,7 +68,6 @@ public class DetailsServlet extends HttpServlet {
                     if (entity != null) {
                         com.remove(commentId);
                     }                    
-                    //com.remove(commentId);
                 } else if (sdo.equals("rate")) {
                     Integer articleId = Integer.parseInt(request.getParameter("articleid"));
                     Integer newreaction = Integer.parseInt(request.getParameter("reaction"));

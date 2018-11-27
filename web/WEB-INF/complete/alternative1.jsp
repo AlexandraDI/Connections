@@ -64,21 +64,15 @@
                     <img src="img/news/man2.jpg" alt="..." style="width:70%;">
                 </div>
                 </div>    
-                   <%-- <h5><center>Personal Info</center></h5>
-                    ${me.firstname} --%>
                     <h6><center><c:out value="${me.firstname}" /></center></h6>
                     <p> <a href="${pageContext.request.contextPath}/network"> <center>My connections</center></a> </p>
                 <a href="${pageContext.request.contextPath}/profile"><center> <i class="fa fa-arrow-circle-o-right"></i> Read More</center></a>
-                </div>
-             <!-- </div>          -->                            
+                </div>                          
             </div> 
                 <div class="comment-box-sn">
                   <h5>Leave an Article</h5>
-                  <!--<textarea name="" id="" placeholder="Comment" ></textarea> -->
                   <input type="text" name="article" placeholder="Article" class="form-control"><br>
-                  <!--<input type="text" name="text" placeholder="Upload Multimedia" class="form-control"><br>-->
                   <button class="btn btn-general btn-green" style="width: 100%;" role="button">Upload Multimedia</button>
-                  <!--<button class="btn btn-general btn-green" style="width: 100%;" role="button">Send</button> -->
                 </div>                                                    
           </div> 
                 

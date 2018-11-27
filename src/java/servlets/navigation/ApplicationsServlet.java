@@ -6,28 +6,22 @@ import dao.SkillDAOImpl;
 import dao.UserApplyAdDAOImpl;
 import dao.UserDAOImpl;
 import dao.UserIsConnectedToUserDAOImpl;
-import dao.definitions.UserDAO;
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
-import java.util.function.Function;
 import java.util.stream.Collectors;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
-import javax.servlet.ServletOutputStream;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 import model.Ad;
 import model.Language;
 import model.Skill;
 import model.User;
 import model.UserApplyAd;
-import model.UserFollowsUser;
 import model.UserIsConnectedToUser;
 
 /**
@@ -41,16 +35,13 @@ public class ApplicationsServlet extends HttpServlet {
             throws ServletException, IOException {
         final int k = 3;
 
-        //HttpSession session = request.getSession();
         Map<String, String[]> params = request.getParameterMap();
 
         User me = (User) request.getSession(false).getAttribute("me");
         UserDAOImpl udao = new UserDAOImpl();
         AdDAOImpl adao = new AdDAOImpl();
         UserApplyAdDAOImpl uaa = new UserApplyAdDAOImpl();
-        //List<Ad> myapplications;//= (List<Ad>) request.getSession(false).getAttribute("myapplications");
-        //Ad ad=new Ad();        
-
+        
         List<UserIsConnectedToUser> networkList;
         List<UserIsConnectedToUser> networkList1;
 
@@ -66,18 +57,13 @@ public class ApplicationsServlet extends HttpServlet {
                 if (sdo.equals("add")) {
                     String adId = params.get("adId")[0];
                     Ad ad = adao.find(Integer.parseInt(adId));
-                    //myapplications = new ArrayList<>();
-                    //                   myapplications.add(ad);
+
                     uaa.create(me.getUserId(), Integer.parseInt(adId), date);
-                    //conadlist.removeAll(myapplications);
 
                 } else if (sdo.equals("notconnectedadd")) {
                     String adId = params.get("adId")[0];
-                    Ad ad = adao.find(Integer.parseInt(adId));
-                    //myapplications = new ArrayList<>();
-//                    myapplications.add(ad);                    
+                    Ad ad = adao.find(Integer.parseInt(adId));                  
                     uaa.create(me.getUserId(), Integer.parseInt(adId), date);
-                    //adlist.removeAll(myapplications);
                 }
             }
         } catch (Exception ex) {
@@ -99,7 +85,6 @@ public class ApplicationsServlet extends HttpServlet {
             for (UserIsConnectedToUser nlist : networkList) {
 
                 connecteduserId = nlist.getUser1().getUserId();
-                //out.println("<p>- " + u.getFirstname()+ " " + u.getSurname()+ " " + u.getPassword() + " </p>");
 
                 for (Ad ad : adlist) {
                     if ((ad.getUserId().getUserId().equals(connecteduserId))) {

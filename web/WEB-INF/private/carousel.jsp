@@ -21,7 +21,6 @@ img {
         
        
         <!-- Carousel items -->
-       <!--<div class="carousel-inner"> -->
             <div class="carousel-item active "> 
               
                <img src="${pageContext.request.contextPath}/img/home-banner-bg.png" alt="homepage" style="width:50%;">
@@ -31,15 +30,12 @@ img {
                                     <span class="wrap"></span></a></span> </h1>        
                         <h3>LOGIN OR REGISTER</h3>
                     </hgroup>
-                    <!--<button type="submit" class="btn btn-general btn-white">Login</button>-->
-                    <!--<button class="btn btn-general btn-green wow fadeInUp" role="button">LOGIN</button>-->
                     <div>
                     <a href="#" class="btn btn-general btn-green wow fadeInUp" data-toggle="modal" data-target="#login-modal">LOGIN</a>
                     </div>
                     
                 </div>        
            </div>
-      <!-- </div> -->
      
    </div> 
  </section> 

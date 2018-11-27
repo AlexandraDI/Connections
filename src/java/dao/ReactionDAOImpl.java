@@ -1,7 +1,5 @@
 package dao;
 
-import dao.DaoEM;
-import dao.definitions.CountryDAO;
 import dao.definitions.ReactionDAO;
 import java.util.List;
 import javax.persistence.EntityTransaction;
@@ -40,17 +38,6 @@ public class ReactionDAOImpl extends DaoEM implements ReactionDAO {
 
     @Override
     public void update(Integer id, Reaction changes) {
-//        EntityTransaction transaction = em.getTransaction();
-//        transaction.begin();
-//        Reaction managed = em.find(Reaction.class, id);
-//
-//        if (managed != null) {
-//            if (changes.getReactionId()!= null) {
-//                managed.setReactionId(changes.getReactionId());
-//            }
-//        }
-//
-//        transaction.commit();
     }
 
     @Override

@@ -1,17 +1,12 @@
 package dao;
 
 import dao.definitions.ProfessionalExperienceDAO;
-import dao.definitions.UserDAO;
-import java.util.ArrayList;
 import java.util.List;
 
-import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
 import javax.persistence.Query;
 
-import jpautils.EntityManagerHelper;
 import model.ProfessionalExperience;
-import model.User;
 
 public class ProfessionalExperienceDAOImpl extends DaoEM implements ProfessionalExperienceDAO {
 

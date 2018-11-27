@@ -1,18 +1,13 @@
 package dao;
 
-import dao.definitions.UserDAO;
 import dao.definitions.UserIsConnectedToUserDAO;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
-import javax.persistence.Query;
 
-import jpautils.EntityManagerHelper;
 import model.User;
-import model.UserFollowsUser;
 import model.UserIsConnectedToUser;
 import model.UserIsConnectedToUserPK;
 

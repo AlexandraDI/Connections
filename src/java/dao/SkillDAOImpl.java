@@ -1,17 +1,12 @@
 package dao;
 
 import dao.definitions.SkillDAO;
-import dao.definitions.UserDAO;
-import java.util.ArrayList;
 import java.util.List;
 
-import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
 import javax.persistence.Query;
 
-import jpautils.EntityManagerHelper;
 import model.Skill;
-import model.User;
 
 public class SkillDAOImpl extends DaoEM implements SkillDAO {
 

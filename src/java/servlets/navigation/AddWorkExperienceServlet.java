@@ -4,13 +4,8 @@ import dao.JobDAOImpl;
 import dao.ProfessionalExperienceDAOImpl;
 import dao.UserDAOImpl;
 import dao.UserHasLanguageDAOImpl;
-import dao.UserIsConnectedToUserDAOImpl;
-import dao.definitions.ArticleDAO;
-import dao.definitions.UserDAO;
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.text.DateFormat;
-import java.util.Comparator;
 import java.util.Date;
 import java.text.SimpleDateFormat;  
 import java.util.List;
@@ -21,10 +16,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
-import model.Article;
 import model.ProfessionalExperience;
-import model.UserIsConnectedToUser;
 import model.User;
 import model.Job;
 
@@ -90,17 +82,13 @@ public class AddWorkExperienceServlet extends HttpServlet {
 
         me = udao.find(me.getUserId());
         List<ProfessionalExperience> myexperiences = me.getProfessionalExperienceList();
-        //List<ProfessionalExperience> myexperiences = udao.find(me.getUserId()).getProfessionalExperienceList();
-        //List<ProfessionalExperience> other_experiences = dao.list();
         List<Job> jobs = jdao.list();
 
         for (ProfessionalExperience p : me.getProfessionalExperienceList()) {
             p.getJobId();
         }
-        //other_experiences.removeAll(myexperiences);
 
         request.setAttribute("myexperiences", myexperiences);
-        //request.setAttribute("other_experiences", other_experiences);
         request.setAttribute("jobs", jobs);
 
         String nextJSP = "/WEB-INF/complete/addworkexperience.jsp";

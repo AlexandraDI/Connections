@@ -69,22 +69,10 @@
                                     <div class="input-group">
                                         <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
                                         <input type="text" class="form-control" name="jobId" id="jobId"  value="${ad.jobId.name}" required="true"/>
-                                        <%--
-                                        <select class="form-control"  name="jobId">
-                                            <c:forEach items="${jobs}" var="job">
-                                                <option  value="${job.jobId}">${job.description}</option>
-                                            </c:forEach>
-                                        </select> 
-                                        --%>
                                     </div>
                                 </div>
                             </div>                            
-
-
-                           <%-- <input type="submit" value="Update" class="btn btn-general btn-green" style="width: 100%;" required="true">--%>
                         </form>
-
-                       <%-- <center>${result}</center>--%>
                     </div>
                 </div>
             </div>

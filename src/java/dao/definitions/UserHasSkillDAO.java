@@ -2,10 +2,6 @@ package dao.definitions;
 
 import java.util.List;
 import model.UserHasSkill;
-import model.Skill;
-import java.sql.Date;
-
-import model.User;
 
 public interface UserHasSkillDAO {
 

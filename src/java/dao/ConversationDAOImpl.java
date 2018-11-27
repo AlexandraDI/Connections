@@ -1,19 +1,14 @@
 package dao;
 
-import dao.definitions.UserDAO;
 import dao.definitions.ConversationDAO;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Date;
 
-import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
-import javax.persistence.Query;
 
-import jpautils.EntityManagerHelper;
 import model.User;
 import model.Conversation;
-import model.UserIsConnectedToUser;
 
 public class ConversationDAOImpl extends DaoEM implements ConversationDAO {
     

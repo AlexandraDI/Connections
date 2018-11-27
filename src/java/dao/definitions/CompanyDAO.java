@@ -3,7 +3,6 @@ package dao.definitions;
 import java.util.List;
 import model.Company;
 
-import model.User;
 
 public interface CompanyDAO {
 

@@ -52,7 +52,7 @@
                                             <input type="text" class="form-control" readonly="true" value="${exp.jobId.name}"/>
 
                                             <span class="input-group-addon"><i class="fa fa-close fa" aria-hidden="true">
-                                                    <!--     <input type="submit" value="delete">-->
+
                                                 </i>
                                             </span><input class="btn btn-general btn-white text-center" type="submit" value="delete">
                                         </div>

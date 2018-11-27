@@ -5,27 +5,15 @@
  */
 package servlets.HTS;
 
-import dao.definitions.UserDAO;
-import dao.UserDAOImpl;
-import dao.definitions.AdministratorDAO;
-import dao.AdministratorDAOImpl;
-import dao.definitions.InterestDAO;
-import dao.InterestDAOImpl;
 import dao.CompanyHasJobDAOImpl;
-import dao.definitions.CompanyHasJobDAO;
-import dao.definitions.CompanyHasFieldOfWorkDAO;
 import dao.CompanyHasFieldOfWorkDAOImpl;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.List;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import model.User;
-import model.Company;
-import model.FieldOfWork;
 
 /**
  *
@@ -57,14 +45,9 @@ public class HTSCompany extends HttpServlet {
             //---------------------------------------------------
             //-----------------------JOB------------------------
             //---------------------------------------------------
-            
-
-            
 
             CompanyHasJobDAOImpl dao = new CompanyHasJobDAOImpl();
-            
-            
-            
+
             try {
                 dao.create(1,1);
                 out.println("<p>Company created (correct)</p>");
@@ -72,17 +55,7 @@ public class HTSCompany extends HttpServlet {
                 out.println("<p>Company not created (error)</p>");
             }     
             
-            /*
-            if( dao.remove(2,1)){
-                out.println("<p>Job removed (correct)</p>");
-            }else{
-                out.println("<p>Job not removed (error)</p>");
-            }            
-            */
-            
              CompanyHasFieldOfWorkDAOImpl dao2 = new CompanyHasFieldOfWorkDAOImpl();
-            
-            
             
             try {
                 dao2.create(1,1);

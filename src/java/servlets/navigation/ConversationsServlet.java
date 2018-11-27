@@ -2,7 +2,6 @@ package servlets.navigation;
 
 import dao.ConversationDAOImpl;
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.util.List;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -27,20 +26,13 @@ public class ConversationsServlet extends HttpServlet {
         User me = (User) request.getSession(false).getAttribute("me");
         List<Conversation> List;
         List<Conversation> List1;
-        /*networkList = (List<UserIsConnectedToUser>) request.getSession(false).getAttribute("networkList");
-        networkList1 = (List<UserIsConnectedToUser>) request.getSession(false).getAttribute("networkList1");*/
 
-        Integer userdetail= me.getUserId();//new User();
-        //userdetail.setUserId(1);
+        Integer userdetail= me.getUserId();
 
         ConversationDAOImpl dao2 = new ConversationDAOImpl();
 
         List = dao2.find(userdetail);
-        List1 = dao2.find2(userdetail); 
-        
-        //request.getSession(false).setAttribute("conversationlist", List);
-        //request.getSession(false).setAttribute("conversationlist1", List1);
-        
+        List1 = dao2.find2(userdetail);         
         
         request.setAttribute("conversationlist", List); 
         request.setAttribute("conversationlist1", List1);        

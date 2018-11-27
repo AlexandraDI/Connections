@@ -1,14 +1,7 @@
 package servlets.HTS;
 
-import dao.definitions.UserDAO;
-import dao.UserDAOImpl;
-import dao.definitions.AdministratorDAO;
-import dao.AdministratorDAOImpl;
 import dao.AdDAOImpl;
-import dao.definitions.InterestDAO;
-import dao.InterestDAOImpl;
 import dao.UserIsConnectedToUserDAOImpl;
-import dao.definitions.UserIsConnectedToUserDAO;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
@@ -18,12 +11,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import model.User;
-import model.Administrator;
-import model.Interest;
 import model.UserIsConnectedToUser;
-import jpautils.EntityManagerHelper;
-import javax.persistence.EntityTransaction;
 import model.Ad;
 
 /**
@@ -65,7 +53,6 @@ public class HTSUserIsConnectedToUser extends HttpServlet {
 
             out.println("<p>Total users: " + users.size() + "</p>");
             
-            out.println("<h1>Test lists####()");
             List<Ad> adlist = dao2.list();            
             int connecteduserId;
             List<Ad> conadlist = new ArrayList<>();
@@ -73,20 +60,16 @@ public class HTSUserIsConnectedToUser extends HttpServlet {
             for (UserIsConnectedToUser nlist1 : users) {
 
                 connecteduserId = nlist1.getUser1().getUserId();
-                //out.println("<p>The net is: " + nlist1.getUser1().getUserId() + " " + " </p>");
                 for (Ad ad : adlist) {
-                    //out.println("<p>for: " + ad.getUserId().getUserId() + " " + " </p>");
                     if (ad.getUserId().getUserId().equals(connecteduserId)) {
                         out.println("<p>The add is: " + ad.getUserId().getUserId() + " " + " </p>");
                         conadlist.add(ad);
                     }
                 }
-            }  
-            out.println("<h1>Test lists####()");            
+            }           
 
-            //out.println("<p>- " + users.get(userId)+ " " + " </p>");
             for (int i = 0; i < users.size(); i++) {
-                out.println("<p>-!- "+ users.get(i)/*.getUser1().getUserId()*/+" </p>");
+                out.println("<p>-!- "+ users.get(i)+" </p>");
             }
             
             
@@ -96,7 +79,6 @@ public class HTSUserIsConnectedToUser extends HttpServlet {
                 out.println("<p>- " + u.getUser1().getUserId() + " " + " </p>");
             }
 
-            out.println("<h1>Test listall2()");
             List<UserIsConnectedToUser> moreusers;
             moreusers = dao.find2(userId);
 
@@ -106,10 +88,7 @@ public class HTSUserIsConnectedToUser extends HttpServlet {
 
                 out.println("<p>- " + u.getUser().getUserId() + " " + " </p>");
             }
-            
-            
 
-            out.println("<h1>Test lists####()");
             
             for (UserIsConnectedToUser nlist1 : users) {
 
@@ -122,7 +101,6 @@ public class HTSUserIsConnectedToUser extends HttpServlet {
                     }
                 }
             }  
-            out.println("<h1>Test lists####()");
 
         }
 

@@ -1,24 +1,16 @@
 
 package dao;
 
-import dao.definitions.AdDAO;
-import dao.definitions.UserDAO;
 import dao.definitions.UserApplyAdDAO;
-import java.util.ArrayList;
 import java.util.List;
 import java.sql.Date;
 
-import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
-import javax.persistence.Query;
 
-import jpautils.EntityManagerHelper;
 import model.UserApplyAd;
 import model.Ad;
 import model.User;
 import model.UserApplyAdPK;
-import model.UserFollowsUser;
-
 
 
 
@@ -101,25 +93,6 @@ public class UserApplyAdDAOImpl extends DaoEM implements UserApplyAdDAO {
 
     @Override
     public boolean remove(Integer userId, Integer adId) {
-     //   throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    
-    /*
-      EntityTransaction transaction = em.getTransaction();
-      transaction.begin();
-      
-      User whichuser = em.find(User.class, userId);
-      Language whichlanguage = em.find(Language.class, languageId);
-      
-      if (whichuser != null && whichlanguage != null) {
-            //whichuser.getLanguageList().remove(whichlanguage);
-            whichlanguage.getUserList().remove(whichuser); 
-            transaction.commit();
-            return true;
-      } else {
-            transaction.commit();
-            return false;
-      }
-        */
 
          EntityTransaction transaction = em.getTransaction();
 

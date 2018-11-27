@@ -1,16 +1,10 @@
 package dao;
 
-import dao.definitions.InterestDAO;
-import dao.definitions.UserDAO;
 import dao.definitions.UserHasInterestDAO;
-import java.util.ArrayList;
 import java.util.List;
 
-import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
-import javax.persistence.Query;
 
-import jpautils.EntityManagerHelper;
 import model.Interest;
 import model.User;
 
@@ -57,7 +51,6 @@ public class UserHasInterestDAOImpl extends DaoEM implements UserHasInterestDAO 
 
     @Override
     public boolean remove(Integer userId, Integer interestId) {
-        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     
     
       EntityTransaction transaction = em.getTransaction();
@@ -67,7 +60,6 @@ public class UserHasInterestDAOImpl extends DaoEM implements UserHasInterestDAO 
       Interest whichinterest = em.find(Interest.class, interestId);
       
       if (whichuser != null && whichinterest != null) {
-            //whichuser.getInterestList().remove(whichinterest);
             whichinterest.getUserList().remove(whichuser); 
             transaction.commit();
             return true;

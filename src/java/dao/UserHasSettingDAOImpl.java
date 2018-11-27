@@ -1,16 +1,10 @@
 package dao;
 
-import dao.definitions.SettingDAO;
-import dao.definitions.UserDAO;
 import dao.definitions.UserHasSettingDAO;
-import java.util.ArrayList;
 import java.util.List;
 
-import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
-import javax.persistence.Query;
 
-import jpautils.EntityManagerHelper;
 import model.UserHasSetting;
 import model.Setting;
 import model.User;
@@ -36,7 +30,7 @@ public class UserHasSettingDAOImpl extends DaoEM implements UserHasSettingDAO {
         if (find == null) {
             return null;
         } else {
-            return null;//find.;
+            return null;
         }
 
     }
@@ -79,13 +73,10 @@ public class UserHasSettingDAOImpl extends DaoEM implements UserHasSettingDAO {
 
         if (whichuser != null && whichsetting != null) {
             if (changes.getValue() != null) {
-                //managed.setValue(changes.getValue());
                 uhs.setUser(whichuser);
                 uhs.setSetting(whichsetting);
                 uhs.setValue(changes.getValue());
                 em.persist(uhs);
-                //whichuser.setValue(changes.getValue());
-                //whichsetting.setValue(changes.getValue());
             }
 
         }
@@ -102,7 +93,6 @@ public class UserHasSettingDAOImpl extends DaoEM implements UserHasSettingDAO {
 
     @Override
     public boolean remove(Integer userId, Integer settingId) {
-        // problem
 
         EntityTransaction transaction = em.getTransaction();
         transaction.begin();

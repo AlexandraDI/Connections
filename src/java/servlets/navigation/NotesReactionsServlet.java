@@ -1,29 +1,19 @@
 package servlets.navigation;
 
-import dao.AdDAOImpl;
 import dao.UserDAOImpl;
-import dao.definitions.AdDAO;
-import dao.definitions.UserDAO;
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
-import java.util.Map;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import model.Ad;
 import model.Article;
 import model.Comment;
 import model.User;
-import model.Job;
 import model.Reaction;
-import model.UserApplyAd;
-import model.UserIsConnectedToUser;
 
 /**
  *
@@ -43,7 +33,7 @@ public class NotesReactionsServlet extends HttpServlet {
         List<Reaction> myreactions= new ArrayList<>();
         List<Comment> mycomments= new ArrayList<>();
         List<Article> myarticles= udao.find(me.getUserId()).getArticleList();
-        List<Reaction> reactions= new ArrayList<>();// = udao.find(me.getUserId()).getReactionList();
+        List<Reaction> reactions= new ArrayList<>();
         List<Comment> comments= new ArrayList<>();
 
         if (!(myarticles == null)) {
@@ -58,7 +48,6 @@ public class NotesReactionsServlet extends HttpServlet {
         
         request.getSession(false).setAttribute("mycomments", mycomments);
         
-        //request.getSession(false).setAttribute("myadlist", my);
         request.setAttribute("mycomments", mycomments); 
         
       
@@ -112,7 +101,7 @@ public class NotesReactionsServlet extends HttpServlet {
     }// </editor-fold>
 
     private UserDAOImpl UserDAOImpl() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        throw new UnsupportedOperationException("Not supported yet."); 
     }
 
 }

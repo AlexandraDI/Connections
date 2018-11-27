@@ -1,15 +1,12 @@
 package dao;
 
 import dao.definitions.ArticleDAO;
-import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 
-import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
 import javax.persistence.Query;
 
-import jpautils.EntityManagerHelper;
 import model.Article;
 
 public class ArticleDAOImpl extends DaoEM implements ArticleDAO {

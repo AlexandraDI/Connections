@@ -1,14 +1,11 @@
 package dao;
 
 import dao.definitions.AdministratorDAO;
-import java.util.ArrayList;
 import java.util.List;
 
-import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
 import javax.persistence.Query;
 
-import jpautils.EntityManagerHelper;
 import model.Administrator;
 
 public class AdministratorDAOImpl extends DaoEM implements AdministratorDAO {
@@ -28,9 +25,6 @@ public class AdministratorDAOImpl extends DaoEM implements AdministratorDAO {
     
     
      public Administrator findByUserID(Integer id) {
-        //Query query = em.createNamedQuery("Administrator.findByUserId").setParameter("id", id);
-        //Administrator administrator = (Administrator) query.getSingleResult();
-        //return administrator;
         
         Query query = em.createNamedQuery("Administrator.findByUserId").setParameter("id",id);
         Object o =  query.getSingleResult();
@@ -62,16 +56,6 @@ public class AdministratorDAOImpl extends DaoEM implements AdministratorDAO {
         EntityTransaction transaction = em.getTransaction();
         transaction.begin();
         Administrator managed = em.find(Administrator.class, id);
-///////////////////////////////////////////////////////////
-//        if (managed != null) {
-//            if (changes.getPassword() != null) {
-//                managed.setPassword(changes.getPassword());
-//            }
-
-//            if (changes.getFirstname() != null) {
-//                managed.setFirstname(changes.getFirstname());
-//            }
-//        }
 
         transaction.commit();
     }

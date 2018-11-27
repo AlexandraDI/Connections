@@ -1,16 +1,6 @@
 package servlets.HTS;
 
-import dao.definitions.UserDAO;
-import dao.UserDAOImpl;
-import dao.definitions.AdministratorDAO;
-import dao.AdministratorDAOImpl;
-import dao.AdDAOImpl;
-import dao.ArticleDAOImpl;
-import dao.definitions.InterestDAO;
-import dao.InterestDAOImpl;
 import dao.ConversationDAOImpl;
-import dao.UserIsConnectedToUserDAOImpl;
-import dao.definitions.ConversationDAO;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
@@ -20,13 +10,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import model.User;
-import model.Administrator;
-import model.Interest;
 import model.Conversation;
-import jpautils.EntityManagerHelper;
-import javax.persistence.EntityTransaction;
-import model.Ad;
 import model.Article;
 
 /**
@@ -53,11 +37,8 @@ public class HTSConversation extends HttpServlet {
 
         List<Conversation> List;
         List<Conversation> List1;
-        /*networkList = (List<UserIsConnectedToUser>) request.getSession(false).getAttribute("networkList");
-        networkList1 = (List<UserIsConnectedToUser>) request.getSession(false).getAttribute("networkList1");*/
 
-        Integer userdetail= 1;//new User();
-        //userdetail.setUserId(1);
+        Integer userdetail= 1;
 
         ConversationDAOImpl dao2 = new ConversationDAOImpl();
 
@@ -78,7 +59,6 @@ public class HTSConversation extends HttpServlet {
         java.sql.Date date = new java.sql.Date(System.currentTimeMillis());
         
         dao2.startConversation(userdetail, 10, date ,"header7");
-        //dao2.stopConversation(userdetail, 10, date ,"header7");
 
 
         }

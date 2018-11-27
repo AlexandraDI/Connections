@@ -43,13 +43,10 @@
         ======================================================--> 
         <section id="single-news-p1" class="single-news-p1">
             <div class="container" style="width:35%">
-                <!-- <div class="row">
-          
-                <!--  <div class="col-md-4">-->
+
                 <div class="bg-light-gray" > 
                     <div class="ad-box-sn"> 
                         <div class="bg--gray" >
-                            <!--<center><h6 style="color:#777;" class="pb-2">Results:</h6></center>-->
 
                             <c:set var="number" value="${fn:length(searchList)}" /> 
 
@@ -69,7 +66,7 @@
                                                             </div>               
                                                             <img src="img/news/man2.jpg" class="img-fluid" alt="..."style="width:50%;">
                                                         </div>
-                                                        <center><h3>${searchList[i].firstname} ${searchList[i].surname}</h3></center> <!--//.userId-->
+                                                        <center><h3>${searchList[i].firstname} ${searchList[i].surname}</h3></center> 
                                                         <center><p class="desc">Professional Position &nbsp; Employment Institution</p></center> 
                                                         <center><a href="${pageContext.request.contextPath}/userdetails?id=${searchList[i].userId}"><i class="fa fa-arrow-circle-o-right"></i> Learn More</a></center>
 
@@ -81,8 +78,6 @@
                             </c:if>
 
                         </div>
-                        <!--      </div> 
-                        <!--  </div>-->
                     </div>
                 </div>
             </div>

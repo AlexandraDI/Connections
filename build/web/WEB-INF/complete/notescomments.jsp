@@ -53,8 +53,6 @@
                                                         <center>  <b>${comment.userId.firstname} ${comment.userId.surname}</b> wrote:  ${comment.content}</center></br>
                                                 </div><center>
                                                 <a href="${pageContext.request.contextPath}/details?articleid=${comment.articleId.articleId}">
-                                                    <!--    <input class="btn btn-general btn-green" style="width: 100%;"
-                                                        <center><h3>POST A JOB</h3></center> > </a> -->
                                                     <button class="btn btn-general btn-green" style="width: 50%;" role="button">Details</button> </a>
                                                     </center> 
                                             </div>

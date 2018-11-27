@@ -1,18 +1,13 @@
 package dao;
 
 import dao.definitions.AdDAO;
-import dao.definitions.UserDAO;
-import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 
-import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
 import javax.persistence.Query;
 
-import jpautils.EntityManagerHelper;
 import model.Ad;
-import model.User;
 
 public class AdDAOImpl extends DaoEM implements AdDAO {
 

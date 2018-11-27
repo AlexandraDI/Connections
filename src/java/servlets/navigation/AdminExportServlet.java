@@ -5,13 +5,8 @@
  */
 package servlets.navigation;
 
-import dao.AdDAOImpl;
-import dao.UserConnectionRequestUserDAOImpl;
 import dao.UserDAOImpl;
-import dao.UserIsConnectedToUserDAOImpl;
 import java.io.IOException;
-import java.io.PrintWriter;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
@@ -27,7 +22,6 @@ import model.User;
 
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.Marshaller;
-import javax.xml.bind.Unmarshaller;
 import modelxml.Catalog;
 
 /**
@@ -69,8 +63,6 @@ public class AdminExportServlet extends HttpServlet {
             if (!params.isEmpty()) {
                 String sdo = params.get("do")[0];
 
-//                response.setContentType("text/xml"); // Tell browser what content type the response body represents, so that it can associate it with e.g. MS Excel, if necessary.
-//                response.setHeader("Content-Disposition", "attachment; filename=users.xml"); // Force "Save As" dialogue.
                 ServletOutputStream out = response.getOutputStream();
 
                 Catalog catalog = new Catalog();

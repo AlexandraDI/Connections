@@ -1,14 +1,11 @@
 package dao;
 
 import dao.definitions.CountryDAO;
-import java.util.ArrayList;
 import java.util.List;
 
-import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
 import javax.persistence.Query;
 
-import jpautils.EntityManagerHelper;
 import model.Country;
 
 public class CountryDAOImpl extends DaoEM implements CountryDAO {

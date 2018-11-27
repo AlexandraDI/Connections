@@ -1,14 +1,11 @@
 package dao;
 
 import dao.definitions.CityDAO;
-import java.util.ArrayList;
 import java.util.List;
 
-import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
 import javax.persistence.Query;
 
-import jpautils.EntityManagerHelper;
 import model.City;
 
 public class CityDAOImpl extends DaoEM implements CityDAO {

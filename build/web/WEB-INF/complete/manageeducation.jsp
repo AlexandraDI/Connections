@@ -86,17 +86,8 @@
                                         <input type="text" class="form-control" name="degree" id="degree" value="Bachelor's/Master's">
                                     </div>
                                 </div>
-                            </div><!--
-                            <h6><font color="dimgray">Entry Year:</font></h6>
-                            <div class="form-group">
-                                <div class="cols-sm-10">    
-                                    <div class="input-group">
-                                        <input type="text" class="form-control" name="entryyear" id="entryyear" value="yyyy">
-                                    </div>  
-                                </div>
-                            </div>-->
-
-
+                            </div>
+                            
                             <div class="form-group ">
                                 <input type="hidden" name="do" value="add">
                                 <center><input class="btn btn-general btn-white text-center" type="submit" value="Add Education"></center>

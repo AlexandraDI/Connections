@@ -1,11 +1,8 @@
 package servlets.navigation;
 
-import dao.ArticleDAOImpl;
 import dao.UserDAOImpl;
-import dao.definitions.ArticleDAO;
 import dao.definitions.UserDAO;
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.util.Date;
 import java.util.Map;
 import javax.servlet.RequestDispatcher;
@@ -14,17 +11,14 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 import model.Article;
 import model.User;
-import parsers.UserAdapter;
 import dao.ArticleDAOImpl;
 import dao.UserIsConnectedToUserDAOImpl;
 import dao.definitions.ArticleDAO;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
-import model.Ad;
 import model.Reaction;
 import model.UserIsConnectedToUser;
 
@@ -73,15 +67,11 @@ public class XronologioServlet extends HttpServlet {
 
         }
 
-        User me = (User) request.getSession(false).getAttribute("me");
-        //////////////HttpSession session = request.getSession();        
-        List<Article> articleList;
-        ////////articleList = (List<Article>) request.getSession(false).getAttribute("articleList");       
+        User me = (User) request.getSession(false).getAttribute("me");       
+        List<Article> articleList;       
 
         List<UserIsConnectedToUser> networkList;
         List<UserIsConnectedToUser> networkList1;
-        /*networkList = (List<UserIsConnectedToUser>) request.getSession(false).getAttribute("networkList");
-        networkList1 = (List<UserIsConnectedToUser>) request.getSession(false).getAttribute("networkList1");*/
 
         User userdetail;
 
@@ -161,7 +151,6 @@ public class XronologioServlet extends HttpServlet {
         request.getSession(false).setAttribute("networkList", networkList);
         request.getSession(false).setAttribute("networkList1", networkList1);
 
-//        request.setAttribute("articleList", articleList);
         request.setAttribute("conarticlelist", allarticles);
 
         request.setAttribute("networkList", networkList);
@@ -171,7 +160,6 @@ public class XronologioServlet extends HttpServlet {
         RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(nextJSP);
         dispatcher.forward(request, response);
 
-        ///getServletContext().getRequestDispatcher("/WEB-INF/complete/xronologio.jsp").forward(request, response);
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

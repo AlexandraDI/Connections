@@ -1,16 +1,12 @@
 package dao;
 
 import dao.definitions.CommentDAO;
-import dao.definitions.UserDAO;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Date;
 
-import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
 import javax.persistence.Query;
 
-import jpautils.EntityManagerHelper;
 import model.Article;
 import model.Comment;
 import model.User;

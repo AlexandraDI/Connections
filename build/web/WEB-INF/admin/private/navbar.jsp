@@ -17,8 +17,8 @@
             <div class="navbar-holder d-flex align-items-center justify-content-between">
                 <div class="navbar-header">
                     <a href="${pageContext.request.contextPath}" class="navbar-brand">
-                        <div class="brand-text brand-big hidden-lg-down"><img src="img/logo-white.png" alt="Logo" class="img-fluid"></div>
-                        <div class="brand-text brand-small"><img src="img/logo-icon.png" alt="Logo" class="img-fluid"></div>
+                        <div class="brand-text brand-big hidden-lg-down"><img src="${pageContext.request.contextPath}/img/con9.png" alt="Logo" class="img-fluid"></div>
+                        <div class="brand-text brand-small"><img src="${pageContext.request.contextPath}/img/fav1.png" alt="Logo" class="img-fluid"></div>
                     </a>
                     <a id="toggle-btn" href="#" class="menu-btn active">
                         <span></span>

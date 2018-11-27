@@ -15,10 +15,6 @@
                                  HEADER
         ======================================================--> 
 
-        <%-- <jsp:include page="/WEB-INF/private/composite/header.jsp"/> --%>
-
-
-
         <header>
 
             <jsp:include page="/WEB-INF/private/topmenubar.jsp"/>
@@ -33,14 +29,12 @@
         <!--====================================================
                                HOME-P
         ======================================================-->
-        <!--    
-            
-        <!--<div id="home-p" class="home-p pages-head3 text-center"> -->
+
         <div id="home-p" class="home-p  text-center"> 
             <img src="${pageContext.request.contextPath}/img/news/man2.png" alt="user" style="width:7%;"> 
             <div class="container">
                 <h1 class="wow fadeInUp" data-wow-delay="0.1s">${user.firstname} ${user.surname}</h1>
-            </div><!--/end container-->
+            </div>
         </div> 
         <!--====================================================
                               NEWS DETAILS
@@ -142,9 +136,7 @@
                                             <div class="input-group">
                                                 <input type="text" class="form-control" readonly="true" value="${exp.jobId.name}"/>
                                                 <fmt:formatDate var="fmtDate" value="${exp.dateStarted}" pattern="dd/MM/yyyy"/>
-                                                <%--<fmt:formatDate var="fmtDateEnd" value="${exp.dateEnded}" pattern="dd/MM/yyyy"/>--%>
                                                 <input type="text" name="bean.dateProperty" class="form-control" readonly="true" value="${fmtDate}"/>
-                                                <%--<input type="text" name="bean.dateProperty" class="form-control" readonly="true" value="${fmtDateEnd}"/>--%>
                                             </div>
                                         </div>
                                     </div>
@@ -193,10 +185,6 @@
                                         <div class="cols-sm-10">
                                             <div class="input-group">
                                                 <input type="text" class="form-control" readonly="true" value="${exp.departmentId.name}"/>
-                                                <%--<fmt:formatDate var="fmtDate" value="${exp.dateStarted}" pattern="dd/MM/yyyy"/>
-                                                <%--<fmt:formatDate var="fmtDateEnd" value="${exp.dateEnded}" pattern="dd/MM/yyyy"/>--%>
-                                                <%-- <input type="text" name="bean.dateProperty" class="form-control" readonly="true" value="${fmtDate}"/>
-                                                <%--<input type="text" name="bean.dateProperty" class="form-control" readonly="true" value="${fmtDateEnd}"/>--%>
                                             </div>
                                         </div>
                                     </div>
@@ -243,9 +231,7 @@
                                             <div class="input-group">
                                                 <input type="text" class="form-control" readonly="true" value="${exp.jobId.name}"/>
                                                 <fmt:formatDate var="fmtDate" value="${exp.dateStarted}" pattern="dd/MM/yyyy"/>
-                                                <%--<fmt:formatDate var="fmtDateEnd" value="${exp.dateEnded}" pattern="dd/MM/yyyy"/>--%>
                                                 <input type="text" name="bean.dateProperty" class="form-control" readonly="true" value="${fmtDate}"/>
-                                                <%--<input type="text" name="bean.dateProperty" class="form-control" readonly="true" value="${fmtDateEnd}"/>--%>
                                             </div>
                                         </div>
                                     </div>
@@ -285,10 +271,6 @@
                                         <div class="cols-sm-10">
                                             <div class="input-group">
                                                 <input type="text" class="form-control" readonly="true" value="${exp.departmentId.name}"/>
-                                                <%--<fmt:formatDate var="fmtDate" value="${exp.dateStarted}" pattern="dd/MM/yyyy"/>
-                                                <%--<fmt:formatDate var="fmtDateEnd" value="${exp.dateEnded}" pattern="dd/MM/yyyy"/>--%>
-                                                <%-- <input type="text" name="bean.dateProperty" class="form-control" readonly="true" value="${fmtDate}"/>
-                                                <%--<input type="text" name="bean.dateProperty" class="form-control" readonly="true" value="${fmtDateEnd}"/>--%>
                                             </div>
                                         </div>
                                     </div>
@@ -300,11 +282,6 @@
         </section>      
  </c:if>
         
-
-
-
-
-
 
         <!--====================================================
                               FOOTER

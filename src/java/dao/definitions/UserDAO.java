@@ -1,8 +1,7 @@
 package dao.definitions;
 
 import java.util.List;
-import model.Language;
-import model.Skill;
+
 
 import model.User;
 

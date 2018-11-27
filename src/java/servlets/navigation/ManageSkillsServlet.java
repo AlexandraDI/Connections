@@ -1,19 +1,10 @@
 package servlets.navigation;
 
-import dao.ArticleDAOImpl;
-import dao.LanguageDAOImpl;
 import dao.SkillDAOImpl;
 import dao.UserDAOImpl;
-import dao.UserHasLanguageDAOImpl;
 import dao.UserHasSkillDAOImpl;
-import dao.UserIsConnectedToUserDAOImpl;
-import dao.definitions.ArticleDAO;
-import dao.definitions.UserDAO;
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.Date;
 import java.util.List;
 import java.util.Map;
 import javax.servlet.RequestDispatcher;
@@ -22,11 +13,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
-import model.Article;
-import model.Language;
 import model.Skill;
-import model.UserIsConnectedToUser;
 import model.User;
 import model.UserHasSkill;
 
@@ -65,7 +52,6 @@ public class ManageSkillsServlet extends HttpServlet {
         }
 
         
-        //List<UserHasSkill> myskills = me.getUserHasSkillList();
         List<UserHasSkill> myskills= udao.find(me.getUserId()).getUserHasSkillList();
         List<Skill> my=new ArrayList<>();
         List<Skill> other_skills = dao.list();
@@ -75,7 +61,6 @@ public class ManageSkillsServlet extends HttpServlet {
         for(UserHasSkill skill: myskills){
             for(i=0; i<size; i++){
              if(skill.getSkill().getToolsAndTechnologyId().equals(other_skills.get(i).getToolsAndTechnologyId())){
-              //other_skills.remove(skill.getSkill());
               other.add(skill.getSkill());             
              }
              

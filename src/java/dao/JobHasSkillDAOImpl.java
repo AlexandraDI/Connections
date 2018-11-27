@@ -1,16 +1,10 @@
 package dao;
 
-import dao.definitions.SkillDAO;
-import dao.definitions.JobDAO;
 import dao.definitions.JobHasSkillDAO;
-import java.util.ArrayList;
 import java.util.List;
 
-import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
-import javax.persistence.Query;
 
-import jpautils.EntityManagerHelper;
 import model.Job;
 import model.Skill;
 
@@ -58,7 +52,6 @@ public class JobHasSkillDAOImpl extends DaoEM implements JobHasSkillDAO {
 
     @Override
     public boolean remove(Integer jobId, Integer skillId) {
-        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     
     
       EntityTransaction transaction = em.getTransaction();

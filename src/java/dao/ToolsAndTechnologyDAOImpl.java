@@ -1,14 +1,11 @@
 package dao;
 
 import dao.definitions.ToolsAndTechnologyDAO;
-import java.util.ArrayList;
 import java.util.List;
 
-import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
 import javax.persistence.Query;
 
-import jpautils.EntityManagerHelper;
 import model.ToolsAndTechnology;
 
 public class ToolsAndTechnologyDAOImpl extends DaoEM implements ToolsAndTechnologyDAO {

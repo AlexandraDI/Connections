@@ -11,29 +11,21 @@
                         <li>
                             <i class="fa fa-envelope"></i> Email: <a href="mailto:connections@gmail.com">connections@gmail.com</a>
                         </li>
-                        <!--
-                        <li>
-                            <i class="fa fa-phone"></i> Hotline: (1) 111 222 33
-                        </li>
-                        -->
                     </ul>
                 </div> 
                 <div class="col-md-5">
                     <ul class="list-inline top-data">
-                        <li><a href="#" target="_empty"><i class="fa top-social fa-facebook"></i></a></li>
-                        <li><a href="#" target="_empty"><i class="fa top-social fa-twitter"></i></a></li>
-                        <li><a href="#" target="_empty"><i class="fa top-social fa-google-plus"></i></a></li> 
+                        <li><a href="https://www.facebook.com/" target="_empty"><i class="fa top-social fa-facebook"></i></a></li>
+                        <li><a href="https://twitter.com/" target="_empty"><i class="fa top-social fa-twitter"></i></a></li>
+                        <li><a href="https://plus.google.com/discover" target="_empty"><i class="fa top-social fa-google-plus"></i></a></li> 
 
 
                         <c:if test="${empty me}">
                             <li><a href="#" class="log-top" data-toggle="modal" data-target="#login-modal">Login or Register</a></li>  
-                            <%--<li><a href="#" class="log-top" data-toggle="modal" data-target="#login-modal">Register</a></li>  --%>
                             </c:if>
                             <c:if test="${not empty me}">
                             <li><a href="${pageContext.request.contextPath}/logout" class="log-top">Logout</a></li>  
                             </c:if>
-
-
 
                     </ul>
                 </div>

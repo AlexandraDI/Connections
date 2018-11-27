@@ -1,16 +1,10 @@
 package dao;
 
-import dao.definitions.JobDAO;
-import dao.definitions.UserDAO;
 import dao.definitions.JobRequiresLanguageDAO;
-import java.util.ArrayList;
 import java.util.List;
 
-import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
-import javax.persistence.Query;
 
-import jpautils.EntityManagerHelper;
 import model.Language;
 import model.Job;
 
@@ -69,9 +63,7 @@ public class JobRequiresLanguageDAOImpl extends DaoEM implements JobRequiresLang
       
       if (whichlanguage != null && whichjob != null) {
             whichjob.getLanguageList().remove(whichlanguage);
-            whichlanguage.getJobList().remove(whichjob);          
-            //whichjob.getLanguageList().remove(whichlanguage);
-            //whichjob.getLanguageList().remove(whichlanguage); 
+            whichlanguage.getJobList().remove(whichjob);           
             transaction.commit();
             return true;
       } else {

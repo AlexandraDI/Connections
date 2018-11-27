@@ -6,9 +6,7 @@
 package servlets.navigation;
 
 import dao.UserDAOImpl;
-import dao.UserIsConnectedToUserDAOImpl;
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.util.List;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -17,7 +15,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import model.User;
-import model.UserIsConnectedToUser;
 
 /**
  *
@@ -41,8 +38,6 @@ public class SearchServlet extends HttpServlet {
           User me = (User) request.getSession(false).getAttribute("me");
         
         List<User> searchList;
-        /*networkList = (List<UserIsConnectedToUser>) request.getSession(false).getAttribute("networkList");
-        networkList1 = (List<UserIsConnectedToUser>) request.getSession(false).getAttribute("networkList1");*/
         
         String what = request.getParameter("what");
         

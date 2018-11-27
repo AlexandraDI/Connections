@@ -6,8 +6,6 @@ import dao.UserDAOImpl;
 import dao.definitions.AdDAO;
 import dao.definitions.UserDAO;
 import java.io.IOException;
-import java.io.PrintWriter;
-import java.util.Date;
 import java.util.List;
 import java.util.Map;
 import javax.servlet.RequestDispatcher;
@@ -40,14 +38,11 @@ public class CreateAdServlet extends HttpServlet {
                 String desc = params.get("desc")[0];  
                 Integer jobId = Integer.parseInt(request.getParameter("jobId").toString());
 
-                //ArticleDAO dao = new ArticleDAOImpl();
                 AdDAO dao = new AdDAOImpl();
                 UserDAO udao = new UserDAOImpl();
                 Job job = new Job();               
 
-                //User author = udao.find(user.getUserId());
                 java.sql.Date date = new java.sql.Date(System.currentTimeMillis());
-                /////////////////////////////////
                 job.setJobId(jobId);
 
                 Ad ad = new Ad();
@@ -75,9 +70,6 @@ public class CreateAdServlet extends HttpServlet {
         
         JobDAOImpl jdao= new JobDAOImpl();
         List<Job> jobs = jdao.list();
-        //List<Language> other_languages = dao.list();
-
-        //other_languages.removeAll(mylanguages);
                
         request.setAttribute("jobs", jobs);        
         

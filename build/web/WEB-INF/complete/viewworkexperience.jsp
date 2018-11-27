@@ -66,9 +66,7 @@
                                         <div class="input-group">
                                            <input type="text" class="form-control" readonly="true" value="${exp.jobId.name}"/>
                                            <fmt:formatDate var="fmtDate" value="${exp.dateStarted}" pattern="dd/MM/yyyy"/>
-                                           <%--<fmt:formatDate var="fmtDateEnd" value="${exp.dateEnded}" pattern="dd/MM/yyyy"/>--%>
                                            <input type="text" name="bean.dateProperty" class="form-control" readonly="true" value="${fmtDate}"/>
-                                           <%--<input type="text" name="bean.dateProperty" class="form-control" readonly="true" value="${fmtDateEnd}"/>--%>
                                         </div>
                                     </div>
                                 </div>

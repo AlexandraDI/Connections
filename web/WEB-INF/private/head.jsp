@@ -11,10 +11,10 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Connections</title>
-    <link rel="shortcut icon" href="img/favicon.ico">
+    <title>onnections</title>
+    <link rel="shortcut icon" href="${pageContext.request.contextPath}/img/fav1.png">
 
-    <!-- Global Stylesheets -->
+    <!-- Global Stylesheets -->    
     <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700,700i" rel="stylesheet">
     <link href="${pageContext.request.contextPath}/css/bootstrap/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/font-awesome-4.7.0/css/font-awesome.min.css">

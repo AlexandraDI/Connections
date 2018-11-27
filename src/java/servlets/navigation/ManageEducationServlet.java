@@ -2,20 +2,10 @@ package servlets.navigation;
 
 import dao.DepartmentDAOImpl;
 import dao.EducationDAOImpl;
-import dao.JobDAOImpl;
-import dao.ProfessionalExperienceDAOImpl;
 import dao.UserDAOImpl;
 import dao.UserHasLanguageDAOImpl;
-import dao.UserIsConnectedToUserDAOImpl;
-import dao.definitions.ArticleDAO;
-import dao.definitions.UserDAO;
 import java.io.IOException;
-import java.io.PrintWriter;
-import java.text.DateFormat;
-import java.util.Comparator;
 import java.util.Date;
-import java.text.SimpleDateFormat;  
-import java.time.LocalDate;
 import java.util.List;
 import java.util.Map;
 import javax.servlet.RequestDispatcher;
@@ -24,14 +14,9 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
-import model.Article;
 import model.Department;
 import model.Education;
-import model.ProfessionalExperience;
-import model.UserIsConnectedToUser;
 import model.User;
-import model.Job;
 
 /**
  *
@@ -63,21 +48,11 @@ public class ManageEducationServlet extends HttpServlet {
                     Date date1,date2;
                     String departmentId = params.get("departmentId")[0];
                     String degree = params.get("degree")[0];
-                    //String entryyear = params.get("entryyear")[0];
-                    //Job job= new Job();
                     Department department= ddao.find(Integer.parseInt(departmentId));
-                    //job.setJobId(Integer.parseInt(jobId));
-                    //job.setName(sdo);
                     
                     education.setUserId(me);
                     education.setDepartmentId(department);
                     education.setDegree(degree);
-                    //java.sql.Date date = new java.sql.Date(System.currentTimeMillis());
-                    //LocalDate localDate = date.toLocalDate();
-                    //date.getYear();
-                    //DateFormat dateFormat = new SimpleDateFormat("yyyy"); 
-                    //date1 = dateFormat.parse(entryyear);
-                    //education.setEntryYear(date);
                     ed.create(education);
                     
 
@@ -97,12 +72,9 @@ public class ManageEducationServlet extends HttpServlet {
 
         for (Education p : me.getEducationList()) {
             p.getDepartmentId();
-            //Education
         }
-        //other_experiences.removeAll(myexperiences);
 
         request.setAttribute("myeducation", myeducation);
-        //request.setAttribute("other_experiences", other_experiences);
         request.setAttribute("departments", departments);
 
         String nextJSP = "/WEB-INF/complete/manageeducation.jsp";

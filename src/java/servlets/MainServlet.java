@@ -9,10 +9,8 @@ import dao.AdministratorDAOImpl;
 import dao.UserDAOImpl;
 import dao.UserHasSettingDAOImpl;
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.util.Map;
 import java.util.List;
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -54,14 +52,12 @@ public class MainServlet extends HttpServlet {
                         newsession.setAttribute("me", user);
                         
                         List<Administrator> administrator= dao2.list();
-                        
-                        //if(administrator !=null){     
-                        if (user.getUserId().equals(administrator.get(0).getUserId().getUserId())){//administrator != null) { 
+                            
+                        if (user.getUserId().equals(administrator.get(0).getUserId().getUserId())){
                             newsession.setAttribute("administrator", administrator.get(0).getUserId());  
                             response.sendRedirect(String.format("%s%s", request.getContextPath(), "/admin"));
                             return;
-                        }
-                        //newsession.setAttribute("temp", administrator);  
+                        } 
                         response.sendRedirect(String.format("%s%s", request.getContextPath(), "/xronologio"));
                         return;
                     }
@@ -90,20 +86,16 @@ public class MainServlet extends HttpServlet {
                                 
                         } catch (Exception ex) {
                              request.setAttribute("result", "The email you have entered already exists. Please enter another email.");
-                             //response.sendRedirect(String.format("%s%s", request.getContextPath(), "/"));
                              getServletContext().getRequestDispatcher("/WEB-INF/index.jsp").forward(request, response);
                              return;
                              
                         }                        
-
-                    ////    dao.create(user);
 
                         HttpSession newsession = request.getSession(true);
                         newsession.setAttribute("me", user);
 
                         response.sendRedirect(String.format("%s%s", request.getContextPath(), "/xronologio"));
 
-//                    getServletContext().getRequestDispatcher("/WEB-INF/complete/xronologio.jsp").forward(request, response);
                         return;
                     }
                 }

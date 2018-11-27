@@ -30,8 +30,6 @@
         <link rel="stylesheet" href="css/news.css"> 
     </head>
 
-    <%--<jsp:include page="/WEB-INF/private/head.jsp"/> --%>
-
     <body id="page-top">
 
         <!--====================================================
@@ -49,22 +47,7 @@
 
         </header> 
 
-        <!--====================================================
-                            LOGIN OR REGISTER
-        ======================================================-->
-
-
-        <!--====================================================
-                               HOME-P
-        ======================================================-->
-        <%--
-            <div id="home-p" class="home-p pages-head1 text-center">
-              <div class="container">
-                <h1 class="wow fadeInUp" data-wow-delay="0.1s">News</h1>
-                <p>Discover more</p>
-              </div><!--/end container-->
-            </div> 
-        --%>
+            
         <!--====================================================
                               NEWS DETAILS
         ======================================================--> 
@@ -77,14 +60,8 @@
 
                             <!-- left news details -->
                             <div class="col-md-4"> 
-                                <!-- <p>&nbsp</p>-->
                                 <div class="bg-gray">  
                                     <div class="ad-box-sn"> 
-
-                                        <!--first--> 
-
-
-                                        <!--second-->
 
                                         <c:set var="number" value="${fn:length(conversationlist)}" /> 
 
@@ -103,10 +80,6 @@
                                                                     <a href="#"> ${conversationlist[i].user2Id.firstname} ${conversationlist[i].user2Id.surname}</a>
                                                                 </div>
                                                             </div>
-
-                                                            <!--
-                                                            <a href="#"><center> USER 2</center></a>
-                                                            -->
                                                         </div>
                                                     </div>
                                                 </div>
@@ -120,18 +93,10 @@
                                                     <div class="thumbnail-blogs">
 
                                                         <div class="bg-light-gray" >
-                                                            <!--
-                                                            <div class="caption">
-                                                              <i class="fa fa-chain"></i>
-                                                            </div>
-                                                            -->
                                                             <img src="img/news/man2.jpg" class="img-fluid" alt="..." style="width:12%;">
                                                             <a > ${me.firstname} ${me.surname}</a>
                                                         </div>
                                                     </div>
-                                                    <!--
-                                                    <a href="#"><center> USER 1</center></a>
-                                                    -->
                                                 </div>
                                             </div>
                                         </div> 
@@ -153,9 +118,6 @@
                                                                     <a href="#">${conversationlist1[i].user1Id.firstname} ${conversationlist1[i].user1Id.surname} </a>
                                                                 </div>
                                                             </div>
-                                                            <!--
-                                                            <a href="#"><center> USER 3</center></a>
-                                                            -->
                                                         </div>
                                                     </div>
                                                 </div>
@@ -169,15 +131,10 @@
                             </div>
 
 
-                            <!-- right news details -->
-
-                            <%--   <div class="ad-box-sn1"> 
-                                 <h3 class="pb-2">History of Conversations</h3>        --%>  
-                            <!--     <div class="ad-box-sn">    -->      
+                            <!-- right news details -->    
                             <div class="col-md-8">
                                 <div class="single-news-p1-cont">
                                     <div class="single-news-desc">
-                                        <!--            <hr> -->
                                         <div class="bg-gray">
                                             <div class="comments-container"> 
                                                 <ul id="comments-list" class="comments-list">
@@ -185,31 +142,29 @@
                                                         <div class="comment-main-level">
                                                             <!-- Avatar -->
                                                             <div class="comment-avatar"><img src="img/news/man2.jpg" alt=""></div>
-                                                            <!-- Contenedor del Comentario -->
+                                                            <!-- comments -->
                                                             <div class="comment-box">
                                                                 <div class="comment-head">
                                                                     <h6 class="comment-name"><a href="#">${me.firstname}</a></h6>
                                                                     <span>before 20 minutes</span>
                                                                 </div>
                                                                 <div class="comment-content">
-                                                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit omnis animi et iure laudantium vitae, praesentium optio, sapiente distinctio illo?
+                                                                         bla bla
                                                                 </div>
                                                             </div>
                                                         </div>
                                                     </li>
-                                                    <!-- Respuestas de los comentarios -->
                                                     <li>
                                                         <ul class="comments-list reply-list">
                                                             <!-- Avatar -->
                                                             <div class="comment-avatar"><img src="img/news/man3.jpg" alt=""></div>
-                                                            <!-- Contenedor del Comentario -->
                                                             <div class="comment-box sub-comment-box">
                                                                 <div class="comment-head">
                                                                     <h6 class="comment-name"><a href="#">${me.firstname}</a></h6>
                                                                     <span>before 10 minutes</span>
                                                                 </div>
                                                                 <div class="comment-content">
-                                                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit omnis animi et iure laudantium vitae, praesentium optio, sapiente distinctio illo?
+                                                                    bla bla
                                                                 </div>
                                                             </div>
 
@@ -227,32 +182,11 @@
                                                                     <span>before 10 minutes</span>
                                                                 </div>
                                                                 <div class="comment-content">
-                                                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit omnis animi et iure laudantium vitae, praesentium optio, sapiente distinctio illo?
+                                                                    bla bla
                                                                 </div>
                                                             </div>
                                                         </div>
                                                     </li>
-                                                    <!--
-                                                       <li>
-                                                      <ul class="comments-list reply-list">
-                                                        <li>
-                                                         
-                                                          <div class="comment-avatar"><img src="img/news/man3.jpg" alt=""></div>
-                                                        
-                                                          <div class="comment-box sub-comment-box">
-                                                            <div class="comment-head">
-                                                              <h6 class="comment-name"><a href="#">${me.firstname}</a></h6>
-                                                              <span>before 10 minutes</span>
-                                                            </div>
-                                                            <div class="comment-content">
-                                                              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit omnis animi et iure laudantium vitae, praesentium optio, sapiente distinctio illo?
-                                                            </div>
-                                                          </div>
-                                                        </li>
-                                
-                                                      </ul>
-                                                    </li>  
-                                                    -->
 
                                                 </ul>
                                             </div>
@@ -267,7 +201,6 @@
 
                                     </div>
                                 </div>  
-                                <!--           <hr>  -->
                             </div>
 
                         </div> 

@@ -9,7 +9,7 @@ import model.Department;
 import model.School;
 import model.UserHasSkill;
 
-@Generated(value="EclipseLink-2.5.2.v20140319-rNA", date="2018-09-30T19:23:56")
+@Generated(value="EclipseLink-2.5.2.v20140319-rNA", date="2018-11-27T16:46:16")
 @StaticMetamodel(Certification.class)
 public class Certification_ { 
 

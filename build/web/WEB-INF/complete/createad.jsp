@@ -68,7 +68,6 @@
                                 <div class="cols-sm-10">
                                     <div class="input-group">
                                         <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
-                                        <!--<input type="text" class="form-control" name="jobId" id="jobId"  placeholder="Job" required="true"/>-->
                                         <select class="form-control"  name="jobId">
                                             <c:forEach items="${jobs}" var="job">
                                                 <option  value="${job.jobId}">${job.description}</option>

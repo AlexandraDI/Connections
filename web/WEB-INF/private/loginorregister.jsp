@@ -18,11 +18,7 @@
                             <input id="email" name="email" class="form-control" type="text" placeholder="Enter email " required>
                             <label for="password">Password</label> 
                             <input id="password" name="password" class="form-control" type="password" placeholder="Enter password" required>
-                            <!--<div class="checkbox">
-                                <label>
-                                    <input type="checkbox"> Remember me
-                                </label>
-                            </div> -->
+
                         </div>
                         <div class="modal-footer text-center">
                             <div>

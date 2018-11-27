@@ -1,16 +1,9 @@
 package servlets.navigation;
 
-import dao.ArticleDAOImpl;
 import dao.LanguageDAOImpl;
 import dao.UserDAOImpl;
 import dao.UserHasLanguageDAOImpl;
-import dao.UserIsConnectedToUserDAOImpl;
-import dao.definitions.ArticleDAO;
-import dao.definitions.UserDAO;
 import java.io.IOException;
-import java.io.PrintWriter;
-import java.util.Comparator;
-import java.util.Date;
 import java.util.List;
 import java.util.Map;
 import javax.servlet.RequestDispatcher;
@@ -19,10 +12,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
-import model.Article;
 import model.Language;
-import model.UserIsConnectedToUser;
 import model.User;
 
 /**

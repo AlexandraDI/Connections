@@ -53,8 +53,6 @@
                                                 </div>
                                                 <center>
                                                 <a href="${pageContext.request.contextPath}/examinedetails?id=${ad.userId}">
-                                                    <!--    <input class="btn btn-general btn-green" style="width: 100%;"
-                                                        <center><h3>POST A JOB</h3></center> > </a> -->
                                                     <button class="btn btn-general btn-green" style="width: 50%;" role="button">Send Friend Request</button> </a>
                                                 </center>
                                             </div>

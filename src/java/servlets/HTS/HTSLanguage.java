@@ -5,25 +5,14 @@
  */
 package servlets.HTS;
 
-import dao.definitions.UserDAO;
-import dao.UserDAOImpl;
-import dao.definitions.AdministratorDAO;
-import dao.AdministratorDAOImpl;
-import dao.definitions.InterestDAO;
-import dao.InterestDAOImpl;
 import dao.UserHasLanguageDAOImpl;
-import dao.definitions.UserHasLanguageDAO;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.List;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import model.User;
-import model.Administrator;
-import model.Interest;
 
 /**
  *
@@ -78,10 +67,6 @@ public class HTSLanguage extends HttpServlet {
             }else{
                 out.println("<p>Language not removed (error)</p>");
             }            
-            
-          
-            
-            
             
             out.println("<p>Test3</p>");
             

@@ -1,21 +1,14 @@
 package dao;
 
-import dao.definitions.LanguageDAO;
-import dao.definitions.UserDAO;
+
 import dao.definitions.UserFollowsUserDAO;
-import dao.definitions.UserHasLanguageDAO;
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
-import javax.persistence.Query;
 
-import jpautils.EntityManagerHelper;
-import model.Language;
 import model.User;
 import model.UserFollowsUser;
-import model.UserHasSetting;
 
 public class UserFollowsUserDAOImpl extends DaoEM implements UserFollowsUserDAO {
 

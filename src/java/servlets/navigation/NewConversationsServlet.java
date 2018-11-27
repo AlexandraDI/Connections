@@ -7,14 +7,9 @@ package servlets.navigation;
 
 import dao.ConversationDAOImpl;
 import dao.MessageDAOImpl;
-import dao.UserConnectionRequestUserDAOImpl;
 import dao.UserDAOImpl;
-import dao.UserIsConnectedToUserDAOImpl;
-import dao.definitions.UserConnectionRequestUserDAO;
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.util.ArrayList;
-import java.util.Comparator;
 import java.util.Date;
 import java.util.List;
 import java.util.Map;
@@ -27,7 +22,6 @@ import javax.servlet.http.HttpServletResponse;
 import model.Conversation;
 import model.Message;
 import model.User;
-import model.UserIsConnectedToUser;
 
 /**
  *
@@ -71,11 +65,6 @@ public class NewConversationsServlet extends HttpServlet {
                     ConversationDAOImpl dao = new ConversationDAOImpl();
                     Conversation conversation = dao.findConversation(conversationid);
                     conversation.getMessageList();
- 
-                    //request.getSession(false).setAttribute("conversation", conversation);
-                    //request.getSession(false).setAttribute("conversationId", conversationid);
-                    //request.getSession(false).setAttribute("conversationlist", List); 
-                    //request.getSession(false).setAttribute("conversationlist1", List1);
                     
                     request.setAttribute("conversation", conversation);
                     request.setAttribute("conversationId", conversationid);
@@ -94,8 +83,6 @@ public class NewConversationsServlet extends HttpServlet {
                     ConversationDAOImpl dao = new ConversationDAOImpl();
                     Integer conversationid;
 
-                    //Conversation conversation = dao.findConversation(conversationid);
-                    //conversation.getMessageList();
                     java.sql.Date date = new java.sql.Date(System.currentTimeMillis());
 
                     Conversation conversation = dao.startConversation(me.getUserId(), id, date, sdo);

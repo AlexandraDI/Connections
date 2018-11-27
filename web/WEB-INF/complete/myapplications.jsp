@@ -61,8 +61,6 @@
                                                     <left><img src="img/news/index2.jpg" class="img-fluid" alt="..."style="width:17%;"></left>
                                                 </div>
                                                 <a href="${pageContext.request.contextPath}/addetails?adId=${ad.adId}">
-                                                    <!--    <input class="btn btn-general btn-green" style="width: 100%;"
-                                                        <center><h3>POST A JOB</h3></center> > </a> -->
                                                     <button class="btn btn-general btn-green" style="width: 50%;" role="button">Details</button> </a>
                                             </div>
                                         </div>

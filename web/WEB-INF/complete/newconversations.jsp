@@ -13,8 +13,8 @@
         <meta name="description" content="">
         <meta name="author" content="">
 
-        <title>Business Bootstrap Responsive Template</title>
-        <link rel="shortcut icon" href="img/favicon.ico">
+    <title>onnections</title>
+    <link rel="shortcut icon" href="${pageContext.request.contextPath}/img/fav1.png">
 
         <!-- Global Stylesheets -->
         <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700,700i" rel="stylesheet">
@@ -81,7 +81,6 @@
                                                 <form method="post" action="">
                                                     <input type="hidden" name="id" value="${conversationlist[i].conversationId}">
                                                     <input type="hidden" name="do" value="details">
-                                                    <!--<center><img src="img/news/man2.jpg" class="img-fluid" alt="..." style="width:12%;"> </center>-->
                                                     <button class="btn btn-general btn-green" style="width: 100%;" role="button">${conversationlist[i].user2Id.firstname} ${conversationlist[i].user2Id.surname}</button></a>
                                                 </form>                                            
                                             </c:if>
@@ -89,7 +88,6 @@
                                                 <form method="post" action="">
                                                     <input type="hidden" name="id" value="${conversationlist[i].conversationId}">
                                                     <input type="hidden" name="do" value="details">
-                                                    <!--<center><img src="img/news/man2.jpg" class="img-fluid" alt="..." style="width:12%;"> </center>-->
                                                     <button class="btn btn-general btn-white text-center" style="width: 100%;" role="button">${conversationlist[i].user2Id.firstname} ${conversationlist[i].user2Id.surname}</button></a>
                                                 </form>                                            
                                             </c:if>                                            
@@ -109,7 +107,6 @@
                                                 <form method="post" action="">
                                                     <input type="hidden" name="id" value="${conversationlist1[i].conversationId}">
                                                     <input type="hidden" name="do" value="details">
-                                                    <!--<center><img src="img/news/man2.jpg" class="img-fluid" alt="..." style="width:12%;"> </center>-->
                                                     <button class="btn btn-general btn-green" style="width: 100%;" role="button">${conversationlist1[i].user1Id.firstname} ${conversationlist1[i].user1Id.surname}</button></a>
                                                 </form> 
                                             </c:if>
@@ -117,7 +114,6 @@
                                                 <form method="post" action="">
                                                     <input type="hidden" name="id" value="${conversationlist1[i].conversationId}">
                                                     <input type="hidden" name="do" value="details">
-                                                    <!--<center><img src="img/news/man2.jpg" class="img-fluid" alt="..." style="width:12%;"> </center>-->
                                                     <button class="btn btn-general btn-white text-center" style="width: 100%;" role="button">${conversationlist1[i].user1Id.firstname} ${conversationlist1[i].user1Id.surname}</button></a>
                                                 </form>                                            
                                             </c:if>                                            
@@ -126,42 +122,6 @@
                                 </c:forEach>
                             </c:if>                            
 
-                            <%--
-                                                        <c:set var="number" value="${fn:length(networklist)}" /> 
-
-                            <c:if test="${number > 0}">
-                                <c:forEach var = "i" begin = "0" end = "${number-1}" step= "1">
-                                    <div class="card">
-
-                                        <div class="desc-comp-offer-cont">
-                                            <div class="thumbnail-blogs">
-                                                <img src="img/news/man2.jpg" class="img-fluid" alt="..." style="width:12%;">
-                                                <a href="#"> ${networklist[i].user1.firstname} ${networklist[i].user1.surname}</a>
-                                 
-
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                </c:forEach> 
-                            </c:if>  
-                            <c:set var="number" value="${fn:length(networklist1)}" /> 
-
-                            <c:if test="${number > 0}">
-                                <c:forEach var = "i" begin = "0" end = "${number-1}" step= "1">
-                                    <div class="card">  
-                                        <div class="desc-comp-offer-cont">                   
-                                            <div class="thumbnail-blogs">
-                                                <img src="img/news/man2.jpg" class="img-fluid" alt="..." style="width:12%;">
-                                                <a href="#"> ${networklist[i].user.firstname} ${networklist[i].user.surname}</a>
-                                          
-
-                                            </div>
-                                        </div>                                         
-                                    </div>
-                                </c:forEach>
-                            </c:if>                                       
-                            --%>
                             </c:if>
 
                         </div>
@@ -188,7 +148,7 @@
                                                     <div class="comment-main-level">
                                                         <!-- Avatar -->
                                                         <div class="comment-avatar"><img src="img/news/man2.jpg" alt=""></div>
-                                                        <!-- Contenedor del Comentario -->
+                                                 
                                                         <div class="comment-box">
                                                             <div class="comment-head">
                                                                 <h6 class="comment-name"><a href="#">${conversation.messageList[i].senderId.firstname}  ${conversation.messageList[i].senderId.surname}</a></h6>

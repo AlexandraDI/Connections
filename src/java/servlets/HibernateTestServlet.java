@@ -5,11 +5,8 @@
  */
 package servlets;
 
-import dao.definitions.UserDAO;
 import dao.UserDAOImpl;
-import dao.definitions.AdministratorDAO;
 import dao.AdministratorDAOImpl;
-import dao.definitions.InterestDAO;
 import dao.InterestDAOImpl;
 import java.io.IOException;
 import java.io.PrintWriter;
