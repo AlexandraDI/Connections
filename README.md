@@ -5,6 +5,6 @@
 <h2> Database </h2>
 MySQL Workbench
 
-More Pictures of the Project:
+<h2>More Pictures of the Project:</h2>
 https://github.com/AlexGna/LinkedInProject/tree/master/pics
 
