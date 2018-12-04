@@ -12,6 +12,6 @@
 <h2> Database </h2>
 <b>MySQL Workbench</b> Version 6.3.6 (64 bits)
 
-<h3>More Pictures of the Project:</h3>
+<h2>More Pictures of the Project:</h2>
 https://github.com/AlexGna/LinkedInProject/tree/master/pics
 
