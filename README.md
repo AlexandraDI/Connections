@@ -5,9 +5,9 @@
 <h2>Technologies</h2>
 _Model_: <b>JPA</b> (Java Persistence API) + <b>MySQL</b> </br>
 _View_: <b>JSP</b> (JavaServer Pages) + <b>JSTL</b> (JavaServer Pages Standard Tag Library) </br>
-<u>Controller</u>: <b>Java Servlet Technology</b> </br>
-<u>Security</u>: <b>SSL</b> (Secure Sockets Layer) </br>
-<u>IDE</u>: <b>Netbeans</b> 8.2
+_Controller_: <b>Java Servlet Technology</b> </br>
+_Security_: <b>SSL</b> (Secure Sockets Layer) </br>
+_IDE_: <b>Netbeans</b> 8.2
 
 <h2> Database </h2>
 <b>MySQL Workbench</b> Version 6.3.6 (64 bits)
