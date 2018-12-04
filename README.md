@@ -5,7 +5,7 @@
 <h2>Technologies</h2>
 Model: JPA + MySQL |
 View: JSP + JSTL |
-Controller: SERVLET |
+Controller: Servlet |
 Security: SSL |
 IDE: Netbeans 8.2
 
