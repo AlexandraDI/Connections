@@ -16,7 +16,7 @@ IDE : <b>Netbeans</b> 8.2
 
 <h2>More Pictures of the Project:</h2>
 
-[Pictures](./pics)
+[Pictures](./src)
 
 https://github.com/AlexGna/LinkedInProject/tree/master/pics
 
