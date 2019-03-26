@@ -8,9 +8,8 @@
 
 
 <h2>Technologies</h2>
-Model : <b>JPA</b> 
-[JPA](./src)
-(Java Persistence API) + <b>MySQL</b></br>
+
+Model : <b>JPA</b> [here](./src/java/dao) (Java Persistence API) + <b>MySQL</b></br>
 View : <b>JSP</b> (JavaServer Pages) + <b>JSTL</b> (JavaServer Pages Standard Tag Library)</br>
 Controller : <b>Java Servlet Technology</b></br>
 Security : <b>SSL</b> (Secure Sockets Layer)</br>
