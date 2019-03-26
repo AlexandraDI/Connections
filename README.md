@@ -16,9 +16,6 @@ IDE : <b>Netbeans</b> 8.2
 
 <h2>More Pictures of the Project:</h2>
 
-[JPA](./src/java/dao)
-
 [Pictures](./pics)
 
-https://github.com/AlexGna/LinkedInProject/tree/master/pics
 
