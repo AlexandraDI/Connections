@@ -14,7 +14,7 @@ IDE : <b>Netbeans</b> 8.2
 <h2> Database </h2>
 <b>MySQL Workbench</b> Version 6.3.6 (64 bits)
 
-<h2Pictures of the Project:</h2>
+<h2> Pictures of the Project:</h2>
 
 [More Pictures](./pics)
 
