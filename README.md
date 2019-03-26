@@ -13,5 +13,8 @@ IDE : <b>Netbeans</b> 8.2
 <b>MySQL Workbench</b> Version 6.3.6 (64 bits)
 
 <h2>More Pictures of the Project:</h2>
+
+[Pictures](./pics)
+
 https://github.com/AlexGna/LinkedInProject/tree/master/pics
 
