@@ -5,9 +5,9 @@
 
 <h2>Technologies</h2>
 
-Model : <b>JPA</b> [(Here)](./src/java/dao) (Java Persistence API) + <b>MySQL</b></br>
+Model : <b>JPA</b> [(Here)](./src/java/dao) (Java Persistence API) + <b>MySQL</b> [(Relation Database Here)](./linkedin.mwb)<</br>
 View : <b>JSP</b> (JavaServer Pages) + <b>JSTL</b> (JavaServer Pages Standard Tag Library) [(Here)](./web/WEB-INF)</br>
-Controller : <b>Java Servlet Technology</b>[(Here)](./src/java/servlets/navigation) </br>
+Controller : <b>Java Servlet Technology</b> [(Here)](./src/java/servlets/navigation) </br>
 Security : <b>SSL</b> (Secure Sockets Layer)</br>
 IDE : <b>Netbeans</b> 8.2
 
