@@ -13,7 +13,7 @@ IDE : <b>Netbeans</b> 8.2
 
 <h2> Database </h2>
 
-<b>MySQL Workbench</b> Version 6.3.6 (64 bits) [(Download Relation Database From Here)](./linkedin.mwb)
+<b>MySQL Workbench</b> Version 6.3.6 (64 bits) [(Download Relational Database From Here)](./linkedin.mwb)
 
 <h2> Pictures of the Project:</h2>
 
